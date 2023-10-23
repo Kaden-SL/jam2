@@ -1,0 +1,8 @@
+[gd_resource type="BankAsset" format=3 uid="uid://irreqiaxrpmv"]
+
+[resource]
+file_path = "res://FmodBanks/Test Bank.bank"
+modified_time = 1698028061
+path = "bank:/Test Bank"
+guid = "{64dd0415-b4f2-4d39-96bd-3519d2838515}"
+name = "Test Bank"

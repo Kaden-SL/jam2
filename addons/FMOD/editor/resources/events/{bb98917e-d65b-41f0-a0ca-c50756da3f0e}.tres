@@ -1,0 +1,45 @@
+[gd_resource type="EventAsset" load_steps=7 format=3 uid="uid://bs36vg1xiop7i"]
+
+[sub_resource type="FMOD_STUDIO_PARAMETER_ID" id="FMOD_STUDIO_PARAMETER_ID_b28ng"]
+data1 = 4190133500
+data2 = 3121572818
+
+[sub_resource type="FMOD_STUDIO_PARAMETER_DESCRIPTION" id="FMOD_STUDIO_PARAMETER_DESCRIPTION_o8pc1"]
+name = "Walla"
+id = SubResource("FMOD_STUDIO_PARAMETER_ID_b28ng")
+maximum = 1.0
+guid = "{95b9b67d-4a1e-45ab-806f-e46ce640bf5a}"
+
+[sub_resource type="ParameterAsset" id="ParameterAsset_v2u4d"]
+parameter_description = SubResource("FMOD_STUDIO_PARAMETER_DESCRIPTION_o8pc1")
+path = "parameter:/Ambience/City/Walla"
+guid = "{95b9b67d-4a1e-45ab-806f-e46ce640bf5a}"
+name = "Walla"
+
+[sub_resource type="FMOD_STUDIO_PARAMETER_ID" id="FMOD_STUDIO_PARAMETER_ID_3rpww"]
+data1 = 2299351613
+data2 = 2981259633
+
+[sub_resource type="FMOD_STUDIO_PARAMETER_DESCRIPTION" id="FMOD_STUDIO_PARAMETER_DESCRIPTION_k2qvj"]
+name = "Traffic"
+id = SubResource("FMOD_STUDIO_PARAMETER_ID_3rpww")
+maximum = 1.0
+guid = "{35dee4f7-9565-4215-8ca7-3eb446a2ab8c}"
+
+[sub_resource type="ParameterAsset" id="ParameterAsset_ts2ja"]
+parameter_description = SubResource("FMOD_STUDIO_PARAMETER_DESCRIPTION_k2qvj")
+path = "parameter:/Ambience/City/Traffic"
+guid = "{35dee4f7-9565-4215-8ca7-3eb446a2ab8c}"
+name = "Traffic"
+
+[resource]
+is_3d = true
+min_distance = 1.0
+max_distance = 20.0
+parameters = {
+"{35dee4f7-9565-4215-8ca7-3eb446a2ab8c}": SubResource("ParameterAsset_ts2ja"),
+"{95b9b67d-4a1e-45ab-806f-e46ce640bf5a}": SubResource("ParameterAsset_v2u4d")
+}
+path = "event:/Ambience/City"
+guid = "{bb98917e-d65b-41f0-a0ca-c50756da3f0e}"
+name = "City"
