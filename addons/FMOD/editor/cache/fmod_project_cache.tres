@@ -1,8 +1,6 @@
-[gd_resource type="ProjectCache" load_steps=26 format=3 uid="uid://3enxlqw0asv0"]
+[gd_resource type="ProjectCache" load_steps=22 format=3 uid="uid://3enxlqw0asv0"]
 
 [sub_resource type="BankAsset" id="BankAsset_dubfl"]
-resource_local_to_scene = false
-resource_name = ""
 file_path = "res://FmodBanks/Master.bank"
 modified_time = 1698028061
 path = "bank:/Master"
@@ -10,8 +8,6 @@ guid = "{816d4737-171a-41e7-a9f0-32996ece71cb}"
 name = "Master"
 
 [sub_resource type="BankAsset" id="BankAsset_0jq1o"]
-resource_local_to_scene = false
-resource_name = ""
 file_path = "res://FmodBanks/Master.strings.bank"
 modified_time = 1698028061
 path = "bank:/Master.strings"
@@ -19,8 +15,6 @@ guid = "{197067e3-6661-0da5-2fb9-b8679f3d7753}"
 name = "Master.strings"
 
 [sub_resource type="BankAsset" id="BankAsset_gv8vn"]
-resource_local_to_scene = false
-resource_name = ""
 file_path = "res://FmodBanks/Test Bank.bank"
 modified_time = 1698028061
 path = "bank:/Test Bank"
@@ -28,132 +22,76 @@ guid = "{64dd0415-b4f2-4d39-96bd-3519d2838515}"
 name = "Test Bank"
 
 [sub_resource type="BusAsset" id="BusAsset_vmn04"]
-resource_local_to_scene = false
-resource_name = ""
 path = "bus:/Music"
 guid = "{7e33a2b3-db05-4b7a-ba1e-e862f2bfde36}"
 name = "Music"
 
 [sub_resource type="BusAsset" id="BusAsset_unxin"]
-resource_local_to_scene = false
-resource_name = ""
 path = "bus:/SFX/Ambience"
 guid = "{d9982c58-a056-4e6c-b8e3-883854b4bffb}"
 name = "Ambience"
 
 [sub_resource type="BusAsset" id="BusAsset_pppce"]
-resource_local_to_scene = false
-resource_name = ""
 path = "bus:/SFX/Character"
 guid = "{3e1d1653-8bd5-4dbc-865e-cba8e8ded970}"
 name = "Character"
 
 [sub_resource type="BusAsset" id="BusAsset_i3yiq"]
-resource_local_to_scene = false
-resource_name = ""
 path = "bus:/SFX/Explosions"
 guid = "{da23c66c-e512-4a93-98dc-02d6f58e4c5a}"
 name = "Explosions"
 
 [sub_resource type="BusAsset" id="BusAsset_iiw3d"]
-resource_local_to_scene = false
-resource_name = ""
 path = "bus:/SFX/Objects"
 guid = "{009ebac0-e5a9-4e69-8d37-6bdc9d8c6f45}"
 name = "Objects"
 
 [sub_resource type="BusAsset" id="BusAsset_b2wt7"]
-resource_local_to_scene = false
-resource_name = ""
 path = "bus:/SFX/Reverb"
 guid = "{524ae5a9-928c-4391-9635-34b41d4602af}"
 name = "Reverb"
 
 [sub_resource type="BusAsset" id="BusAsset_mlsjh"]
-resource_local_to_scene = false
-resource_name = ""
 path = "bus:/SFX/Vehicles"
 guid = "{37ebea86-d649-4a7a-b7b5-25701bfce8e9}"
 name = "Vehicles"
 
 [sub_resource type="BusAsset" id="BusAsset_7uguj"]
-resource_local_to_scene = false
-resource_name = ""
 path = "bus:/SFX/Weapons"
 guid = "{dd124d8d-1ccd-4871-a160-5024e3e3f116}"
 name = "Weapons"
 
 [sub_resource type="BusAsset" id="BusAsset_tcu3h"]
-resource_local_to_scene = false
-resource_name = ""
 path = "bus:/SFX"
 guid = "{d320eb98-3d4a-4cd9-a001-fdb4e071c58e}"
 name = "SFX"
 
 [sub_resource type="BusAsset" id="BusAsset_5stq5"]
-resource_local_to_scene = false
-resource_name = ""
 path = "bus:/UI"
 guid = "{670390e5-527e-4f22-8654-b0326c9cc0c6}"
 name = "UI"
 
 [sub_resource type="BusAsset" id="BusAsset_0yhmh"]
-resource_local_to_scene = false
-resource_name = ""
 path = "bus:/VO"
 guid = "{69d0d47a-7f4b-4d6c-bfc3-bda91e9f7f1f}"
 name = "VO"
 
 [sub_resource type="BusAsset" id="BusAsset_gdhbg"]
-resource_local_to_scene = false
-resource_name = ""
 path = "bus:/"
 guid = "{af9d027a-3a1f-49a8-a9ef-4cbe20673632}"
 name = "Master"
 
-[sub_resource type="FMOD_STUDIO_PARAMETER_ID" id="FMOD_STUDIO_PARAMETER_ID_3rpww"]
-resource_local_to_scene = false
-resource_name = ""
-data1 = 2299351613
-data2 = 2981259633
-
-[sub_resource type="FMOD_STUDIO_PARAMETER_DESCRIPTION" id="FMOD_STUDIO_PARAMETER_DESCRIPTION_k2qvj"]
-resource_local_to_scene = false
-resource_name = ""
-name = "Traffic"
-maximum = 1.0
-guid = "{35dee4f7-9565-4215-8ca7-3eb446a2ab8c}"
-
 [sub_resource type="ParameterAsset" id="ParameterAsset_ts2ja"]
-resource_local_to_scene = false
-resource_name = ""
 path = "parameter:/Ambience/City/Traffic"
 guid = "{35dee4f7-9565-4215-8ca7-3eb446a2ab8c}"
 name = "Traffic"
 
-[sub_resource type="FMOD_STUDIO_PARAMETER_ID" id="FMOD_STUDIO_PARAMETER_ID_b28ng"]
-resource_local_to_scene = false
-resource_name = ""
-data1 = 4190133500
-data2 = 3121572818
-
-[sub_resource type="FMOD_STUDIO_PARAMETER_DESCRIPTION" id="FMOD_STUDIO_PARAMETER_DESCRIPTION_o8pc1"]
-resource_local_to_scene = false
-resource_name = ""
-name = "Walla"
-maximum = 1.0
-guid = "{95b9b67d-4a1e-45ab-806f-e46ce640bf5a}"
-
 [sub_resource type="ParameterAsset" id="ParameterAsset_v2u4d"]
-resource_local_to_scene = false
-resource_name = ""
 path = "parameter:/Ambience/City/Walla"
 guid = "{95b9b67d-4a1e-45ab-806f-e46ce640bf5a}"
 name = "Walla"
 
 [sub_resource type="EventAsset" id="EventAsset_m3rmo"]
-resource_local_to_scene = false
-resource_name = ""
 is_3d = true
 min_distance = 1.0
 max_distance = 20.0
@@ -166,22 +104,16 @@ guid = "{bb98917e-d65b-41f0-a0ca-c50756da3f0e}"
 name = "City"
 
 [sub_resource type="VCAAsset" id="VCAAsset_s1o07"]
-resource_local_to_scene = false
-resource_name = ""
 path = "vca:/Environment"
 guid = "{3f0b7d64-e765-400e-ae74-c2d973ad4ca1}"
 name = "Environment"
 
 [sub_resource type="VCAAsset" id="VCAAsset_8edl2"]
-resource_local_to_scene = false
-resource_name = ""
 path = "vca:/Equipment"
 guid = "{bf15a3f1-6824-492a-8cb1-db2383349f1b}"
 name = "Equipment"
 
 [sub_resource type="VCAAsset" id="VCAAsset_v0e2l"]
-resource_local_to_scene = false
-resource_name = ""
 path = "vca:/Player"
 guid = "{62d29c9d-bd2f-46ac-8dea-c37c666f3cfd}"
 name = "Player"
