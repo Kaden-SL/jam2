@@ -19,6 +19,10 @@ config/icon="res://icon.svg"
 
 FMODRuntime="*res://addons/FMOD/runtime/fmod_runtime_manager.gd"
 
+[display]
+
+window/stretch/mode="viewport"
+
 [fmod]
 
 settings/banks_path="res://FmodBanks"
