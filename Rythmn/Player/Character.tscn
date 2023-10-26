@@ -1,3 +1,18 @@
-[gd_scene format=3 uid="uid://cwhvudm0ireiv"]
+[gd_scene load_steps=3 format=3 uid="uid://cwhvudm0ireiv"]
+
+[ext_resource type="Texture2D" uid="uid://cdui3jsct5y0y" path="res://Rythmn/Player/playerTest.png" id="1_oqo33"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vrcov"]
+size = Vector2(96, 96)
 
 [node name="Character" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(400, 304)
+shape = SubResource("RectangleShape2D_vrcov")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(400, 305)
+texture = ExtResource("1_oqo33")
