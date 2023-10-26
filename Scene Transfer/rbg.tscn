@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://b2meilojq10u8"]
+
+[ext_resource type="Texture2D" uid="uid://bh6pv4q4x2yic" path="res://Scene Transfer/Player/RBG.png" id="1_71b0n"]
+[ext_resource type="Script" path="res://Scene Transfer/SceneTransfer.gd" id="1_hlkr0"]
+[ext_resource type="Texture2D" uid="uid://chutjpv2oa1nj" path="res://Scene Transfer/Player/BBG.png" id="2_3p0tv"]
+[ext_resource type="Texture2D" uid="uid://j61c6qurh637" path="res://Scene Transfer/Player/GBG.png" id="3_8b8h1"]
+
+[node name="RBG" type="StaticBody2D"]
+script = ExtResource("1_hlkr0")
+
+[node name="RBG" type="Sprite2D" parent="."]
+position = Vector2(577.5, 324.5)
+scale = Vector2(0.623437, 0.652778)
+texture = ExtResource("1_71b0n")
+
+[node name="Bbg" type="Sprite2D" parent="."]
+position = Vector2(579.5, 324.5)
+scale = Vector2(0.620313, 0.647222)
+texture = ExtResource("2_3p0tv")
+
+[node name="Gbg" type="Sprite2D" parent="."]
+position = Vector2(580, 324)
+scale = Vector2(0.619792, 0.640741)
+texture = ExtResource("3_8b8h1")

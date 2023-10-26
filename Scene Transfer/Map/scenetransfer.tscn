@@ -1,3 +1,12 @@
-[gd_scene format=3 uid="uid://qoswv2c21i67"]
+[gd_scene load_steps=3 format=3 uid="uid://qoswv2c21i67"]
+
+[ext_resource type="PackedScene" uid="uid://b2meilojq10u8" path="res://Scene Transfer/rbg.tscn" id="1_2mmxj"]
+[ext_resource type="PackedScene" uid="uid://65ipcby7iwcr" path="res://Scene Transfer/player.tscn" id="2_eua3k"]
 
 [node name="scenetransfer" type="Node2D"]
+
+[node name="RBG" parent="." instance=ExtResource("1_2mmxj")]
+position = Vector2(-14, -4)
+
+[node name="Player" parent="." instance=ExtResource("2_eua3k")]
+position = Vector2(-54, -83)
