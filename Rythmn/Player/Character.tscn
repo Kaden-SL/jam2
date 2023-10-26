@@ -6,13 +6,12 @@
 size = Vector2(96, 96)
 
 [node name="Character" type="Node2D"]
+position = Vector2(576, 324)
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(400, 304)
 shape = SubResource("RectangleShape2D_vrcov")
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
-position = Vector2(400, 305)
 texture = ExtResource("1_oqo33")

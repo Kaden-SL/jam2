@@ -11,4 +11,3 @@ format = 2
 [node name="NoteManager" parent="." instance=ExtResource("1_mfxeb")]
 
 [node name="Character" parent="." instance=ExtResource("1_7n2kl")]
-position = Vector2(176, 24)
