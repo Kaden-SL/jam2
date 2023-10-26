@@ -1,6 +1,14 @@
-[gd_scene format=3 uid="uid://ccjbs5ssa36r8"]
+[gd_scene load_steps=3 format=3 uid="uid://ccjbs5ssa36r8"]
+
+[ext_resource type="PackedScene" uid="uid://cwhvudm0ireiv" path="res://Rythmn/Player/Character.tscn" id="1_7n2kl"]
+[ext_resource type="PackedScene" uid="uid://dhuqxxpfa0wkj" path="res://Rythmn/Note Manager/NoteManager.tscn" id="1_mfxeb"]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
 format = 2
+
+[node name="NoteManager" parent="." instance=ExtResource("1_mfxeb")]
+
+[node name="Character" parent="." instance=ExtResource("1_7n2kl")]
+position = Vector2(176, 24)
