@@ -15,6 +15,8 @@ var waitTime = 0;
 # position, universe color, wait time, 
 var songNotes = [["down","R",1],["left","R",1]]
 
+# Get a list of the active notes instances
+var activeSongNotes = []
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	
