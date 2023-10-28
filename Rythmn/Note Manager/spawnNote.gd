@@ -40,3 +40,6 @@ func _ready():
 			if y == 2:
 				await get_tree().create_timer(x[y]).timeout
 				add_child(instance)
+				
+func _process(delta):
+	pass

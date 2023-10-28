@@ -25,6 +25,10 @@ window/size/viewport_width=2000
 window/size/viewport_height=2000
 window/stretch/mode="viewport"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/FMOD/plugin.cfg", "res://addons/modplayer/plugin.cfg")
+
 [fmod]
 
 settings/banks_path="res://FmodBanks"
