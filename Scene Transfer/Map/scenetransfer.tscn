@@ -6,7 +6,7 @@
 [node name="scenetransfer" type="Node2D"]
 
 [node name="RBG" parent="." instance=ExtResource("1_2mmxj")]
-position = Vector2(-14, -4)
+position = Vector2(427, 695)
 
 [node name="Player" parent="." instance=ExtResource("2_eua3k")]
-position = Vector2(-54, -83)
+position = Vector2(969, 1010)
