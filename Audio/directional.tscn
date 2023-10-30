@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://boohdmq5yodsk"]
+
+[ext_resource type="AudioStream" uid="uid://cpemcb7o2ol3f" path="res://Audio/sound/wind-chimes-no-background-noise-57238.mp3" id="1_gs8vs"]
+[ext_resource type="Script" path="res://Audio/directional.gd" id="1_wrigo"]
+
+[node name="directional" type="Node2D"]
+script = ExtResource("1_wrigo")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(1876, 1049)
+stream = ExtResource("1_gs8vs")
