@@ -1,8 +1,0 @@
-[gd_resource type="BankAsset" format=3 uid="uid://du8sgs7dx0usb"]
-
-[resource]
-file_path = "res://FmodBanks/Master.strings.bank"
-modified_time = 1698028061
-path = "bank:/Master.strings"
-guid = "{197067e3-6661-0da5-2fb9-b8679f3d7753}"
-name = "Master.strings"

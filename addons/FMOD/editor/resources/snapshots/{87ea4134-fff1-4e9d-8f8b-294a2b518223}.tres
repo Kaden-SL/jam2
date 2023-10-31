@@ -1,7 +1,0 @@
-[gd_resource type="EventAsset" format=3 uid="uid://mbww4mtuhapl"]
-
-[resource]
-is_snapshot = true
-path = "snapshot:/Health Low"
-guid = "{87ea4134-fff1-4e9d-8f8b-294a2b518223}"
-name = "Health Low"
