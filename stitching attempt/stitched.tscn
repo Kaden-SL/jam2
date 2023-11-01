@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://ca1y6oxnhemns"]
+[gd_scene load_steps=8 format=3 uid="uid://ca1y6oxnhemns"]
 
 [ext_resource type="Script" path="res://stitching attempt/stitched.gd" id="1_u81ey"]
 [ext_resource type="Script" path="res://addons/midi/MidiPlayer.gd" id="2_1qvjs"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dts52ruaow83n" path="res://Rythmn/CenterPoint.tscn" id="4_fug0m"]
 [ext_resource type="Texture2D" uid="uid://lj2ov373cojw" path="res://All Levels/Art/Backgrounds/Placeholder_Background.png" id="5_8bmay"]
 [ext_resource type="AudioStream" uid="uid://dukv5purfm72" path="res://All Levels/Music/Waveshaper - A Picture in Motion (from Furi original soundtrack).mp3" id="6_6ml58"]
+[ext_resource type="PackedScene" uid="uid://65ipcby7iwcr" path="res://Scene Transfer/player.tscn" id="7_yvuj4"]
 
 [node name="stitched" type="Node2D"]
 script = ExtResource("1_u81ey")
@@ -25,8 +26,10 @@ scale = Vector2(0.5, 0.5)
 position = Vector2(1000, 1000)
 
 [node name="PlaceholderBackground" type="Sprite2D" parent="."]
-position = Vector2(1000, 1000)
+position = Vector2(1000, 900)
 texture = ExtResource("5_8bmay")
 
 [node name="MusicPlayer" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("6_6ml58")
+
+[node name="Player" parent="." instance=ExtResource("7_yvuj4")]

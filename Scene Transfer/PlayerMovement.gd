@@ -1,7 +1,6 @@
-extends StaticBody2D
+extends CharacterBody2D
 
-var speed = 150
-var velocity = Vector2()
+var speed = 250
 var playerOrigin_x
 var playerOrigin_y
 # Called when the node enters the scene tree for the first time.
@@ -10,15 +9,16 @@ func _ready():
 	playerOrigin_y = self.position.y
 	pass # Replace with function body.
 	
-func _process(_delta):
-	if Input.is_action_just_pressed("R"):
-		$Sprite2D/AnimatedSprite2D.play("R")
-	if Input.is_action_just_pressed("G"):
-		$Sprite2D/AnimatedSprite2D.play("G")
-	if Input.is_action_just_pressed("B"):
-		$Sprite2D/AnimatedSprite2D.play("B")
-	if Input.is_action_just_pressed("P"):
-		$Sprite2D/AnimatedSprite2D.play("P")
+#commented out just to try and implement test assets	
+#func _process(_delta):
+#	if Input.is_action_just_pressed("R"):
+#		$Sprite2D/AnimatedSprite2D.play("R")
+#	if Input.is_action_just_pressed("G"):
+#		$Sprite2D/AnimatedSprite2D.play("G")
+#	if Input.is_action_just_pressed("B"):
+#		$Sprite2D/AnimatedSprite2D.play("B")
+#	if Input.is_action_just_pressed("P"):
+#		$Sprite2D/AnimatedSprite2D.play("P")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
