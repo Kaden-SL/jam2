@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://ccjbs5ssa36r8"]
 
 [ext_resource type="PackedScene" uid="uid://cwhvudm0ireiv" path="res://Rythmn/Player/Character.tscn" id="1_7n2kl"]
-[ext_resource type="PackedScene" uid="uid://dhuqxxpfa0wkj" path="res://Rythmn/Note Manager/NoteManager.tscn" id="1_mfxeb"]
+[ext_resource type="PackedScene" uid="uid://boohdmq5yodsk" path="res://Audio/directional.tscn" id="3_kcknw"]
 [ext_resource type="PackedScene" uid="uid://dts52ruaow83n" path="res://Rythmn/CenterPoint.tscn" id="3_ryw28"]
 
 [node name="Node2D" type="Node2D"]
@@ -12,7 +12,7 @@ position = Vector2(576, 324)
 [node name="TileMap" type="TileMap" parent="."]
 format = 2
 
-[node name="NoteManager" parent="." instance=ExtResource("1_mfxeb")]
-
 [node name="Character" parent="." instance=ExtResource("1_7n2kl")]
 scale = Vector2(0.5, 0.5)
+
+[node name="directional" parent="." instance=ExtResource("3_kcknw")]
