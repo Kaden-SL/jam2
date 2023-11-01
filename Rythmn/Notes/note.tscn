@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dhu545g1du8x6"]
 
-[ext_resource type="Texture2D" uid="uid://qcm57uv5mcf5" path="res://Rythmn/Notes/note1.png" id="1_2k2ym"]
 [ext_resource type="Script" path="res://Rythmn/Notes/MoveNote.gd" id="1_ei2j3"]
+[ext_resource type="Texture2D" uid="uid://vrmkex8p6t6o" path="res://All Levels/Art/Notes/Note_Perfect.png" id="2_1ffi2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l7rsm"]
 size = Vector2(96, 96)
@@ -13,6 +13,7 @@ script = ExtResource("1_ei2j3")
 shape = SubResource("RectangleShape2D_l7rsm")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_2k2ym")
+scale = Vector2(0.13, 0.13)
+texture = ExtResource("2_1ffi2")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

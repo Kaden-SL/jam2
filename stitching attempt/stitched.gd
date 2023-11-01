@@ -9,15 +9,9 @@ var left = Vector2(0,1000);
 var right = Vector2(2000,1000);
 var up = Vector2(1000,0); 
 var down = Vector2(1000,2000);
-# Called when the node enters the scene tree for the first time.
-# func _ready():
-# $AudioStreamPlayer2D.play()
+
 func _on_midi_event( channel, event ):
 	if event.type==SMF.MIDIEventType.note_on:
-		print('played')
-	# channel is same as $GodotMidiPlayer.channel_status[track_id]
-	# event is event parameter. see SMF.gd and MidiPlayer.gd
-	#     -> more information at "MIDIEvent" at https://bitbucket.org/arlez80/godot-midi-player/wiki/struct/SMF
 		var pos = randi() % 4
 		var instance = note.instantiate()
 		if pos == 0:
@@ -39,4 +33,5 @@ func _ready( ):
 	print( OS.get_connected_midi_inputs( ) )
 	for current_midi_input in OS.get_connected_midi_inputs( ):
 		print(current_midi_input)
-	
+	await get_tree().create_timer(1.4).timeout
+	$MusicPlayer.play()

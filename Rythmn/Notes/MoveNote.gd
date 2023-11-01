@@ -1,5 +1,5 @@
 extends Area2D
-@export var speed = 100.0;
+@export var speed = 500.0;
 var centerScreen = Vector2(1000,1000)
 # Called when the node enters the scene tree for the first time.
 func _ready():
