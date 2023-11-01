@@ -13,6 +13,6 @@ stream = ExtResource("1_gs8vs")
 
 [node name="GodotMIDIPlayer" type="Node" parent="."]
 script = ExtResource("3_b70up")
-file = "res://data/SecondPianoRiff.mid"
+file = "res://data/Furi - A picture in motion.mid"
 playing = true
 soundfont = "res://data/Aspirin-Stereo.sf2"

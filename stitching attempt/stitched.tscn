@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://ca1y6oxnhemns"]
+
+[ext_resource type="Script" path="res://stitching attempt/stitched.gd" id="1_u81ey"]
+[ext_resource type="Script" path="res://addons/midi/MidiPlayer.gd" id="2_1qvjs"]
+[ext_resource type="PackedScene" uid="uid://cwhvudm0ireiv" path="res://Rythmn/Player/Character.tscn" id="3_2bse1"]
+[ext_resource type="PackedScene" uid="uid://dts52ruaow83n" path="res://Rythmn/CenterPoint.tscn" id="4_fug0m"]
+
+[node name="stitched" type="Node2D"]
+script = ExtResource("1_u81ey")
+
+[node name="GodotMIDIPlayer" type="Node" parent="."]
+script = ExtResource("2_1qvjs")
+file = "res://data/Furi - A picture in motion.mid"
+playing = true
+soundfont = "res://data/Aspirin-Stereo.sf2"
+
+[node name="Character" parent="." instance=ExtResource("3_2bse1")]
+position = Vector2(1000, 1000)
+scale = Vector2(0.5, 0.5)
+
+[node name="CenterPoint" parent="." instance=ExtResource("4_fug0m")]
+position = Vector2(1000, 1000)
