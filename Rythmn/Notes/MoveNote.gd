@@ -21,10 +21,13 @@ func _on_body_entered(body):
 		if self.is_in_group("R"):
 			if Global.current_universe == "R":
 				queue_free()
+				Global.bossHealth -= 1
 				print("PlayerHit")
+				if Global.bossHealth == 0:
+					print("dead")
 		# Make more of these to detect universes aligning
 	if body.is_in_group("DeathBox"):
 		print("DeathBoxHit")
-		Global.missedNotes += 1
-		if Global.missedNotes == 10:
+		Global.missedNotes -= 1
+		if Global.missedNotes == 0:
 			print("dead")

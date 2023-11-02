@@ -1,4 +1,5 @@
 extends Node
 
-var missedNotes = 0
+var missedNotes = 50
+var bossHealth = 100
 var current_universe = "R"
