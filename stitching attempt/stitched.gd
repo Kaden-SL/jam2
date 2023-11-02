@@ -23,6 +23,7 @@ func _on_midi_event( channel, event ):
 			instance.position = right
 		if totalCounter == 3:
 			instance.position = down
+		instance.add_to_group("R") #make this a system that assigns universes
 		add_child(instance)
 		counter += 1
 		if counter == 3:

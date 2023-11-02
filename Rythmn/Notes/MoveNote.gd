@@ -18,8 +18,11 @@ func _process(delta):
 
 func _on_body_entered(body):
 	if body.is_in_group("Player"):
-		queue_free()
-		print("PlayerHit")
+		if self.is_in_group("R"):
+			if Global.current_universe == "R":
+				queue_free()
+				print("PlayerHit")
+		# Make more of these to detect universes aligning
 	if body.is_in_group("DeathBox"):
 		print("DeathBoxHit")
 		Global.missedNotes += 1
