@@ -7,12 +7,13 @@
 [node name="Node2D" type="Node2D"]
 
 [node name="CenterPoint" parent="." instance=ExtResource("3_ryw28")]
-position = Vector2(576, 324)
+position = Vector2(1000, 1000)
 
 [node name="TileMap" type="TileMap" parent="."]
 format = 2
 
 [node name="Character" parent="." instance=ExtResource("1_7n2kl")]
+position = Vector2(1000, 1000)
 scale = Vector2(0.5, 0.5)
 
 [node name="directional" parent="." instance=ExtResource("3_kcknw")]

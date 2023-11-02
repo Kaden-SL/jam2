@@ -5,24 +5,32 @@ const SMF = preload( "res://addons/midi/SMF.gd" )
 const Utility = preload( "res://addons/midi/Utility.gd" )
 var note = preload("res://Rythmn/Notes/note.tscn")
 var counter = 0
+var totalCounter = 0
 var left = Vector2(0,1000);
 var right = Vector2(2000,1000);
 var up = Vector2(1000,0); 
 var down = Vector2(1000,2000);
 
 func _on_midi_event( channel, event ):
+	#print(SMF.MIDIEventType)
 	if event.type==SMF.MIDIEventType.note_on:
-		var pos = randi() % 4
 		var instance = note.instantiate()
-		if pos == 0:
+		if totalCounter == 0:
 			instance.position = left
-		if pos == 1:
+		if totalCounter == 1:
 			instance.position = up
-		if pos == 2:
+		if totalCounter == 2:
 			instance.position = right
-		if pos == 3:
+		if totalCounter == 3:
 			instance.position = down
 		add_child(instance)
+		counter += 1
+		if counter == 3:
+			counter = 0
+			if totalCounter == 3:
+				totalCounter = 0
+			else:
+				totalCounter += 1
 func _ready( ):
 	if self.midi_player.connect("midi_event",Callable(self,"_on_midi_event")) != OK:
 		print( "error" )
