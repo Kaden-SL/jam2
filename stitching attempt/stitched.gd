@@ -36,11 +36,10 @@ func _ready( ):
 	if self.midi_player.connect("midi_event",Callable(self,"_on_midi_event")) != OK:
 		print( "error" )
 		breakpoint
-
 	# MIDI input test.
 	OS.open_midi_inputs( )
 	print( OS.get_connected_midi_inputs( ) )
 	for current_midi_input in OS.get_connected_midi_inputs( ):
 		print(current_midi_input)
 	await get_tree().create_timer(1.4).timeout
-	$MusicPlayer.play()
+	$TheMusicPlayer.play()
