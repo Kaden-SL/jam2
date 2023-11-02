@@ -18,8 +18,9 @@ func _process(delta):
 func _on_body_entered(body):
 	if body.is_in_group("Player"):
 		queue_free()
+		print("PlayerHit")
 	if body.is_in_group("DeathBox"):
+		print("DeathBoxHit")
 		HP -= 1
 		if HP == 0:
 			print("dead")
-		#queue_free()
