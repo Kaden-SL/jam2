@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://ceoq1o1kdn3un" path="res://stitching attempt/Background_Realism.png" id="2_6444h"]
 [ext_resource type="Texture2D" uid="uid://qhaqhi4wn78f" path="res://stitching attempt/versewalker_wc_bg_rough.png" id="3_yrx0w"]
 [ext_resource type="Texture2D" uid="uid://b1b8yu1dvnnpk" path="res://stitching attempt/punk_temp_background.png" id="4_37cju"]
-[ext_resource type="Texture2D" uid="uid://b0dq0hl3evboe" path="res://Scene Transfer/Player/Rectangle 1.png" id="4_qpcdd"]
+[ext_resource type="Texture2D" uid="uid://lj2ov373cojw" path="res://All Levels/Art/Backgrounds/Placeholder_Background.png" id="5_4vcvi"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_k74gk"]
 
@@ -27,8 +27,8 @@ scale = Vector2(1.11, 1.11)
 texture = ExtResource("4_37cju")
 
 [node name="Sprite2D4" type="Sprite2D" parent="."]
-scale = Vector2(1.069, 1.83)
-texture = ExtResource("4_qpcdd")
+scale = Vector2(1.18, 1.18)
+texture = ExtResource("5_4vcvi")
 
 [node name="Timer" type="Timer" parent="."]
 

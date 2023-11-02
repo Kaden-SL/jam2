@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://ceoq1o1kdn3un" path="res://stitching attempt/Background_Realism.png" id="2_1b0ds"]
 [ext_resource type="Texture2D" uid="uid://b1b8yu1dvnnpk" path="res://stitching attempt/punk_temp_background.png" id="3_0281e"]
 [ext_resource type="Texture2D" uid="uid://qhaqhi4wn78f" path="res://stitching attempt/versewalker_wc_bg_rough.png" id="4_v5vqn"]
-[ext_resource type="Texture2D" uid="uid://b0dq0hl3evboe" path="res://Scene Transfer/Player/Rectangle 1.png" id="5_e7spv"]
+[ext_resource type="Texture2D" uid="uid://lj2ov373cojw" path="res://All Levels/Art/Backgrounds/Placeholder_Background.png" id="5_xx0wi"]
 [ext_resource type="Texture2D" uid="uid://5brok1fh7db5" path="res://Scene Transfer/Map/Untitled_ArtworkTempBG.png" id="6_b8yjj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f2l58"]
@@ -18,21 +18,21 @@ scale = Vector2(0.839999, 1)
 script = ExtResource("1_hlkr0")
 
 [node name="RBG" type="Sprite2D" parent="."]
-scale = Vector2(4.8, 4.8)
+scale = Vector2(1.93, 1.93)
 texture = ExtResource("2_1b0ds")
 
 [node name="Bbg" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(1, 1)
+scale = Vector2(0.41, 0.41)
 texture = ExtResource("4_v5vqn")
 
 [node name="Gbg" type="Sprite2D" parent="."]
-visible = false
+scale = Vector2(0.4, 0.4)
 texture = ExtResource("3_0281e")
 
 [node name="Pbg" type="Sprite2D" parent="."]
-visible = false
-texture = ExtResource("5_e7spv")
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("5_xx0wi")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 visible = false
