@@ -1,9 +1,9 @@
 [gd_scene load_steps=9 format=3 uid="uid://b2meilojq10u8"]
 
-[ext_resource type="Texture2D" uid="uid://bh6pv4q4x2yic" path="res://Scene Transfer/Player/RBG.png" id="1_71b0n"]
 [ext_resource type="Script" path="res://Scene Transfer/SceneTransfer.gd" id="1_hlkr0"]
-[ext_resource type="Texture2D" uid="uid://chutjpv2oa1nj" path="res://Scene Transfer/Player/BBG.png" id="2_3p0tv"]
-[ext_resource type="Texture2D" uid="uid://j61c6qurh637" path="res://Scene Transfer/Player/GBG.png" id="3_8b8h1"]
+[ext_resource type="Texture2D" uid="uid://ceoq1o1kdn3un" path="res://stitching attempt/Background_Realism.png" id="2_1b0ds"]
+[ext_resource type="Texture2D" uid="uid://b1b8yu1dvnnpk" path="res://stitching attempt/punk_temp_background.png" id="3_0281e"]
+[ext_resource type="Texture2D" uid="uid://qhaqhi4wn78f" path="res://stitching attempt/versewalker_wc_bg_rough.png" id="4_v5vqn"]
 [ext_resource type="Texture2D" uid="uid://b0dq0hl3evboe" path="res://Scene Transfer/Player/Rectangle 1.png" id="5_e7spv"]
 [ext_resource type="Texture2D" uid="uid://5brok1fh7db5" path="res://Scene Transfer/Map/Untitled_ArtworkTempBG.png" id="6_b8yjj"]
 
@@ -13,31 +13,30 @@ size = Vector2(26.6342, 4.89394)
 [sub_resource type="CircleShape2D" id="CircleShape2D_7sr5e"]
 
 [node name="RBG" type="StaticBody2D" groups=["DeathBox"]]
+position = Vector2(971, 997)
 scale = Vector2(0.839999, 1)
 script = ExtResource("1_hlkr0")
 
 [node name="RBG" type="Sprite2D" parent="."]
-position = Vector2(653.5, 405.5)
-scale = Vector2(0.623437, 0.652778)
-texture = ExtResource("1_71b0n")
+scale = Vector2(4.8, 4.8)
+texture = ExtResource("2_1b0ds")
 
 [node name="Bbg" type="Sprite2D" parent="."]
-position = Vector2(655.5, 405.5)
-scale = Vector2(0.620313, 0.647222)
-texture = ExtResource("2_3p0tv")
+visible = false
+position = Vector2(1, 1)
+texture = ExtResource("4_v5vqn")
 
 [node name="Gbg" type="Sprite2D" parent="."]
-position = Vector2(656, 405)
-scale = Vector2(0.619792, 0.640741)
-texture = ExtResource("3_8b8h1")
+visible = false
+texture = ExtResource("3_0281e")
 
 [node name="Pbg" type="Sprite2D" parent="."]
-position = Vector2(669, 397)
-scale = Vector2(0.639804, 0.661762)
+visible = false
 texture = ExtResource("5_e7spv")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(670.239, 411)
+visible = false
+position = Vector2(670.239, 409)
 scale = Vector2(0.30066, -0.19269)
 texture = ExtResource("6_b8yjj")
 
@@ -49,6 +48,5 @@ shape = SubResource("RectangleShape2D_f2l58")
 disabled = true
 
 [node name="DeathCollisionShape2D2" type="CollisionShape2D" parent="." groups=["DeathBox", "Player"]]
-position = Vector2(666.667, 396)
 scale = Vector2(26.53, 17.687)
 shape = SubResource("CircleShape2D_7sr5e")

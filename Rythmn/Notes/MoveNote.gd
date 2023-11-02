@@ -1,7 +1,8 @@
 extends Area2D
 @export var speed = 500.0;
 var centerScreen = Vector2(1000,1000)
-var HP = 10
+var current_universe = Global.current_universe
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -21,6 +22,6 @@ func _on_body_entered(body):
 		print("PlayerHit")
 	if body.is_in_group("DeathBox"):
 		print("DeathBoxHit")
-		HP -= 1
-		if HP == 0:
+		Global.missedNotes += 1
+		if Global.missedNotes == 10:
 			print("dead")

@@ -7,11 +7,11 @@
 [node name="scenetransfer" type="Node2D"]
 
 [node name="TimedBG" parent="." instance=ExtResource("1_413ml")]
-position = Vector2(1014, 1072)
+position = Vector2(993, 1062)
 
 [node name="RBG" parent="." instance=ExtResource("1_2mmxj")]
-position = Vector2(583, 653)
+position = Vector2(1006, 1026)
 scale = Vector2(0.719049, 1.022)
 
 [node name="Player" parent="." instance=ExtResource("2_eua3k")]
-position = Vector2(1062, 1049)
+position = Vector2(1027, 1034)

@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dr32jy5x388ej" path="res://stitching attempt/Character_Realism.png" id="2_v88hx"]
 [ext_resource type="Texture2D" uid="uid://cenoqbru3bc7c" path="res://stitching attempt/Concept Art - Protagonist - 170-02 Jam 2 - October 25th, 2023.png" id="3_i0fil"]
 [ext_resource type="Texture2D" uid="uid://bxx1gkng7cwat" path="res://stitching attempt/versewalker_wc_char2.png" id="4_668su"]
-[ext_resource type="Texture2D" uid="uid://eq2wdrcydgd8" path="res://Scene Transfer/Map/Untitled_Artwork.png" id="5_lc801"]
+[ext_resource type="Texture2D" uid="uid://cx7ddi0go0x7l" path="res://Scene Transfer/Map/Player.png" id="5_vyofi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mdjjc"]
 size = Vector2(130.109, 255)
@@ -37,7 +37,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_lc801")
+"texture": ExtResource("5_vyofi")
 }],
 "loop": true,
 "name": &"4 P",
@@ -54,7 +54,8 @@ scale = Vector2(1.84668, 1.83646)
 shape = SubResource("RectangleShape2D_mdjjc")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_v88hx")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sprite2D"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_61lat")
-animation = &"1 R"
+animation = &"3 B"

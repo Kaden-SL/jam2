@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://ca1y6oxnhemns"]
+[gd_scene load_steps=11 format=3 uid="uid://ca1y6oxnhemns"]
 
 [ext_resource type="Script" path="res://stitching attempt/stitched.gd" id="1_u81ey"]
 [ext_resource type="Script" path="res://addons/midi/MidiPlayer.gd" id="2_1qvjs"]
@@ -10,7 +10,6 @@
 [ext_resource type="PackedScene" uid="uid://65ipcby7iwcr" path="res://Scene Transfer/player.tscn" id="7_yvuj4"]
 [ext_resource type="AudioStream" uid="uid://djp5ond4op60s" path="res://All Levels/Music/AcrylicRock.wav" id="8_oay8n"]
 [ext_resource type="Script" path="res://stitching attempt/MissedNotes.gd" id="10_1vtgp"]
-[ext_resource type="Script" path="res://stitching attempt/CurrentUniverse.gd" id="11_i3hcu"]
 
 [node name="stitched" type="Node2D"]
 script = ExtResource("1_u81ey")
@@ -30,35 +29,24 @@ scale = Vector2(0.5, 0.5)
 position = Vector2(1000, 1000)
 
 [node name="PlaceholderBackground" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(-1280, 868)
+position = Vector2(1000, 900)
 texture = ExtResource("5_8bmay")
 
 [node name="TimedBG" parent="." instance=ExtResource("6_2p41b")]
-position = Vector2(972, 995)
+position = Vector2(1004, 995)
 
 [node name="RBG" parent="." instance=ExtResource("7_xreju")]
-position = Vector2(954, 999)
+position = Vector2(452, 609)
 
 [node name="MusicPlayer" type="AudioStreamPlayer2D" parent="."]
-position = Vector2(-2130, 27)
 stream = ExtResource("8_oay8n")
 
 [node name="Player" parent="." instance=ExtResource("7_yvuj4")]
-position = Vector2(1032, 1086)
 
 [node name="Missed Notes" type="Label" parent="."]
-offset_left = 282.0
-offset_top = 70.0
-offset_right = 322.0
-offset_bottom = 93.0
-scale = Vector2(7.66367, 11)
+offset_left = 640.0
+offset_top = 699.0
+offset_right = 680.0
+offset_bottom = 722.0
+scale = Vector2(2.90367, 5)
 script = ExtResource("10_1vtgp")
-
-[node name="current_universe" type="Label" parent="."]
-offset_left = 227.0
-offset_top = 1333.0
-offset_right = 267.0
-offset_bottom = 1356.0
-scale = Vector2(4.92, 6.84)
-script = ExtResource("11_i3hcu")
