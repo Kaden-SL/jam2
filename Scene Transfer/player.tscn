@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dioe6btx7ljtj" path="res://All Levels/Art/Character/Realism_Character.png" id="2_8f0nh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mdjjc"]
-size = Vector2(130.109, 242)
+size = Vector2(130.109, 255)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_61lat"]
 
@@ -14,7 +14,7 @@ script = ExtResource("1_8ygsd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(5.5, -16)
-scale = Vector2(1.20668, 1.2)
+scale = Vector2(1.84668, 1.83646)
 shape = SubResource("RectangleShape2D_mdjjc")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -22,5 +22,4 @@ scale = Vector2(0.12, 0.12)
 texture = ExtResource("2_8f0nh")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-visible = false
 sprite_frames = SubResource("SpriteFrames_61lat")

@@ -3,16 +3,36 @@ extends StaticBody2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$Timer.start()
+	#$Timer.start()
 	$Sprite2D.visible = true
 	$Sprite2D2.visible = false
 	$Sprite2D3.visible = false
 	$Sprite2D4.visible = false
+	switchBG()
 
-
+func switchBG():
+	await get_tree().create_timer(1.4).timeout
+	$Sprite2D.visible = false
+	$Sprite2D2.visible = true
+	await get_tree().create_timer(1.4).timeout
+	$Sprite2D2.visible = false
+	$Sprite2D3.visible = true
+	await get_tree().create_timer(1.4).timeout
+	$Sprite2D3.visible = false
+	$Sprite2D4.visible = true
+	await get_tree().create_timer(1.4).timeout
+	$Sprite2D4.visible = false
+	$Sprite2D.visible = true
+	await get_tree().create_timer(1.4).timeout
+	$Sprite2D4.visible = false
+	$Sprite2D.visible = true
+	switchBG()
+	
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
-	#pass
+	#$Sprite2D.visible = true
+	#switchBG()
 	
 func goR():
 	$Sprite2D.visible = true
@@ -34,7 +54,8 @@ func goP():
 	$Sprite2D2.visible = false
 	$Sprite2D3.visible = false
 	$Sprite2D4.visible = true
-		
+	
+"""
 func _on_timer_timeout():
 	#$Sprite2D.visible = false
 	#$Sprite2D2.visible = true
@@ -58,3 +79,4 @@ func _on_timer_timeout():
 		$Sprite2D.visible = true
 		#goR()
 		$Timer.start()
+"""
