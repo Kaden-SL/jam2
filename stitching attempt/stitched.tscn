@@ -1,14 +1,11 @@
-[gd_scene load_steps=14 format=3 uid="uid://ca1y6oxnhemns"]
+[gd_scene load_steps=11 format=3 uid="uid://ca1y6oxnhemns"]
 
 [ext_resource type="Script" path="res://stitching attempt/stitched.gd" id="1_u81ey"]
 [ext_resource type="Script" path="res://addons/midi/MidiPlayer.gd" id="2_1qvjs"]
-[ext_resource type="PackedScene" uid="uid://cwhvudm0ireiv" path="res://Rythmn/Player/Character.tscn" id="3_2bse1"]
-[ext_resource type="PackedScene" uid="uid://dts52ruaow83n" path="res://Rythmn/CenterPoint.tscn" id="4_fug0m"]
-[ext_resource type="Texture2D" uid="uid://lj2ov373cojw" path="res://All Levels/Art/Backgrounds/Placeholder_Background.png" id="5_8bmay"]
 [ext_resource type="PackedScene" uid="uid://4d7t3qipm4ox" path="res://Scene Transfer/timed_bg.tscn" id="6_2p41b"]
 [ext_resource type="PackedScene" uid="uid://b2meilojq10u8" path="res://Scene Transfer/rbg.tscn" id="7_xreju"]
 [ext_resource type="PackedScene" uid="uid://65ipcby7iwcr" path="res://Scene Transfer/player.tscn" id="7_yvuj4"]
-[ext_resource type="AudioStream" uid="uid://djp5ond4op60s" path="res://All Levels/Music/AcrylicRock.wav" id="8_oay8n"]
+[ext_resource type="AudioStream" uid="uid://djp5ond4op60s" path="res://01 Final Draft/Audio/01-Main/AcrylicRock.wav" id="9_opu1u"]
 [ext_resource type="Script" path="res://stitching attempt/MissedNotes.gd" id="10_1vtgp"]
 [ext_resource type="Script" path="res://stitching attempt/BossHealth.gd" id="10_i25bu"]
 [ext_resource type="Script" path="res://stitching attempt/CurrentUniverse.gd" id="11_i3hcu"]
@@ -23,18 +20,6 @@ file = "res://data/AcrylicMelodyMIDI.mid"
 playing = true
 volume_db = -80.0
 soundfont = "res://data/Aspirin-Stereo.sf2"
-
-[node name="Character" parent="." instance=ExtResource("3_2bse1")]
-position = Vector2(1000, 1000)
-scale = Vector2(0.5, 0.5)
-
-[node name="CenterPoint" parent="." instance=ExtResource("4_fug0m")]
-position = Vector2(1000, 1000)
-
-[node name="PlaceholderBackground" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(-1280, 868)
-texture = ExtResource("5_8bmay")
 
 [node name="TimedBG" parent="." instance=ExtResource("6_2p41b")]
 position = Vector2(972, 995)
@@ -70,7 +55,7 @@ scale = Vector2(4.92, 6.84)
 script = ExtResource("11_i3hcu")
 
 [node name="TheMusicPlayer" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("8_oay8n")
+stream = ExtResource("9_opu1u")
 
 [node name="Perfect" parent="." groups=["Perfect"] instance=ExtResource("13_pjsp5")]
 position = Vector2(1000, 1000)

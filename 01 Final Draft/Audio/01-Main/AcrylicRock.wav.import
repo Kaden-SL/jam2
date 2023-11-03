@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://djp5ond4op60s"
-path="res://.godot/imported/AcrylicRock.wav-1529e14c468c57249684df8bf4b10ca4.sample"
+path="res://.godot/imported/AcrylicRock.wav-cdb835c6542e1b4f99699adb9b37313f.sample"
 
 [deps]
 
-source_file="res://All Levels/Music/AcrylicRock.wav"
-dest_files=["res://.godot/imported/AcrylicRock.wav-1529e14c468c57249684df8bf4b10ca4.sample"]
+source_file="res://01 Final Draft/Audio/01-Main/AcrylicRock.wav"
+dest_files=["res://.godot/imported/AcrylicRock.wav-cdb835c6542e1b4f99699adb9b37313f.sample"]
 
 [params]
 

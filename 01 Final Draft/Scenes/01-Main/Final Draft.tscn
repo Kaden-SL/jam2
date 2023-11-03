@@ -1,0 +1,61 @@
+[gd_scene load_steps=11 format=3 uid="uid://b5dcwiup2l7nv"]
+
+[ext_resource type="Script" path="res://01 Final Draft/Scripts/01-Main/Final Draft.gd" id="1_0qwpp"]
+[ext_resource type="Script" path="res://addons/midi/MidiPlayer.gd" id="2_1xniy"]
+[ext_resource type="PackedScene" uid="uid://c2yoso5vxf45g" path="res://01 Final Draft/Scenes/Background/final_timed_bg.tscn" id="3_jqrc5"]
+[ext_resource type="PackedScene" uid="uid://dj2ashexuuylb" path="res://01 Final Draft/Scenes/Character/FinalPlayer.tscn" id="4_eij50"]
+[ext_resource type="Script" path="res://01 Final Draft/Scripts/Notes/FinalMissedNotes.gd" id="5_dyjf3"]
+[ext_resource type="Script" path="res://01 Final Draft/Scripts/Boss/FinalBossHealth.gd" id="6_rr30r"]
+[ext_resource type="Script" path="res://01 Final Draft/Scripts/01-Main/FinalCurrentUniverse.gd" id="7_kbl1w"]
+[ext_resource type="PackedScene" uid="uid://0dumlb557eqt" path="res://01 Final Draft/Scenes/Pocket Dimension/Pocket Dimension.tscn" id="8_fn1wf"]
+[ext_resource type="AudioStream" uid="uid://djp5ond4op60s" path="res://01 Final Draft/Audio/01-Main/AcrylicRock.wav" id="9_11xf4"]
+[ext_resource type="PackedScene" uid="uid://uuky1ny3r7jt" path="res://01 Final Draft/Scenes/Notes/Final_Note_Hit_Level.tscn" id="10_l4vkr"]
+
+[node name="Final Draft" type="Node2D"]
+script = ExtResource("1_0qwpp")
+
+[node name="GodotMIDIPlayer" type="Node" parent="."]
+script = ExtResource("2_1xniy")
+file = "res://data/AcrylicMelodyMIDI.mid"
+playing = true
+volume_db = -80.0
+soundfont = "res://data/Aspirin-Stereo.sf2"
+
+[node name="FinalTimedBG" parent="." instance=ExtResource("3_jqrc5")]
+
+[node name="Pocket Dimension" parent="." instance=ExtResource("8_fn1wf")]
+
+[node name="Final Player" parent="." instance=ExtResource("4_eij50")]
+
+[node name="Missed Notes" type="Label" parent="."]
+offset_left = 282.0
+offset_top = 70.0
+offset_right = 322.0
+offset_bottom = 93.0
+scale = Vector2(7.66367, 11)
+script = ExtResource("5_dyjf3")
+
+[node name="Boss Health" type="Label" parent="."]
+offset_left = 1662.0
+offset_top = 64.0
+offset_right = 1702.0
+offset_bottom = 87.0
+scale = Vector2(7.66367, 11)
+script = ExtResource("6_rr30r")
+
+[node name="current_universe" type="Label" parent="."]
+offset_left = 227.0
+offset_top = 1333.0
+offset_right = 267.0
+offset_bottom = 1356.0
+scale = Vector2(4.92, 6.84)
+script = ExtResource("7_kbl1w")
+
+[node name="TheMusicPlayer" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_11xf4")
+
+[node name="Perfect" parent="." groups=["Perfect"] instance=ExtResource("10_l4vkr")]
+
+[node name="Good" parent="." groups=["Good"] instance=ExtResource("10_l4vkr")]
+
+[node name="Miss" parent="." groups=["Miss"] instance=ExtResource("10_l4vkr")]
