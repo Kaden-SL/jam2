@@ -32,7 +32,7 @@ func _process(delta):
 func _on_body_entered(body):
 	# if the notes touch the player, and the player is in the correct universe: hit the note
 	if body.is_in_group("Player"):
-		if self.is_in_group(Global.current_universe):
+		if self.is_in_group(Global.current_universe) and self.is_in_group("Miss") == false:
 				queue_free()
 				Global.bossHealth -= 1
 				print("PlayerHit")
@@ -51,3 +51,16 @@ func _switch_groups(NG,OG):
 		self.remove_from_group(OG)
 	if self.is_in_group(NG) == false:
 		self.add_to_group(NG)
+
+
+func _on_area_entered(area):
+	if area.is_in_group("Perfect"):
+		self.add_to_group("Perfect")
+		
+	if area.is_in_group("Good"):
+		self.remove_from_group("Perfect")
+		self.add_to_group("Good")
+		
+	if area.is_in_group("Miss"):
+		self.remove_from_group("Good")
+		self.add_to_group("Miss")
