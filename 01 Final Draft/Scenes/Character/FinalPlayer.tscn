@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" path="res://01 Final Draft/Scripts/Character/PlayerMovement.gd" id="1_44ee6"]
 [ext_resource type="Texture2D" uid="uid://cq0vixebvpaye" path="res://All Levels/Art/Backgrounds/Character_Realismresize.png" id="2_jvbyk"]
-[ext_resource type="Texture2D" uid="uid://cfx2843128ryn" path="res://All Levels/Art/Backgrounds/Concept Art - Protagonist - 170-02 Jam 2 - October 25th, 2023.png" id="3_uh836"]
-[ext_resource type="Texture2D" uid="uid://kpoplgj57qsb" path="res://All Levels/Art/Backgrounds/versewalker_wc_char2resize.png" id="4_vqrjf"]
-[ext_resource type="Texture2D" uid="uid://cyoxe23nlah68" path="res://All Levels/Art/Backgrounds/EDM Verse Walkerresize.png" id="5_f53cg"]
+[ext_resource type="Texture2D" uid="uid://dxdffgjftyjlu" path="res://01 Final Draft/Art Assets/Character/Punk Character.png" id="3_xwot2"]
+[ext_resource type="Texture2D" uid="uid://c6mhhrp51fwya" path="res://01 Final Draft/Art Assets/Character/versewalker_wc_char1.png" id="4_6pptb"]
+[ext_resource type="Texture2D" uid="uid://cm43wldotnslh" path="res://01 Final Draft/Art Assets/Character/EDM Character 1.png" id="5_tcciu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mdjjc"]
 size = Vector2(130.109, 255)
@@ -21,7 +21,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_uh836")
+"texture": ExtResource("3_xwot2")
 }],
 "loop": true,
 "name": &"2 G",
@@ -29,7 +29,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("4_vqrjf")
+"texture": ExtResource("4_6pptb")
 }],
 "loop": true,
 "name": &"3 B",
@@ -37,7 +37,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_f53cg")
+"texture": ExtResource("5_tcciu")
 }],
 "loop": true,
 "name": &"4 P",
@@ -48,14 +48,12 @@ animations = [{
 position = Vector2(1000, 1000)
 script = ExtResource("1_44ee6")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="Collision Shape" type="CollisionShape2D" parent="."]
 position = Vector2(5.5, -16)
 scale = Vector2(1.84668, 1.83646)
 shape = SubResource("RectangleShape2D_mdjjc")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sprite2D"]
-scale = Vector2(0.25, 0.25)
+[node name="Player Animations" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_61lat")
-animation = &"3 B"
+animation = &"4 P"

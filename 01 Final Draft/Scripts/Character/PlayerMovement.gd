@@ -13,16 +13,16 @@ func _ready():
 	
 func _process(_delta):
 	if Input.is_action_just_pressed("R"):
-		$Sprite2D/AnimatedSprite2D.play("1 R")
+		$"Player Animations".play("1 R")
 		Global.current_universe = "R"
 	if Input.is_action_just_pressed("G"):
-		$Sprite2D/AnimatedSprite2D.play("2 G")
+		$"Player Animations".play("2 G")
 		Global.current_universe = "G"
 	if Input.is_action_just_pressed("B"):
-		$Sprite2D/AnimatedSprite2D.play("3 B")
+		$"Player Animations".play("3 B")
 		Global.current_universe = "B"
 	if Input.is_action_just_pressed("P"):
-		$Sprite2D/AnimatedSprite2D.play("4 P")
+		$"Player Animations".play("4 P")
 		Global.current_universe = "P"
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
