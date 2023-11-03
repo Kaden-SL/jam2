@@ -4,29 +4,29 @@ extends StaticBody2D
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	#$Timer.start()
-	$Sprite2D.visible = true
-	$Sprite2D2.visible = false
-	$Sprite2D3.visible = false
-	$Sprite2D4.visible = false
+	$Realism.visible = true
+	$WaterColor.visible = false
+	$Punk.visible = false
+	$EDM.visible = false
 	switchBG()
 
 # swtiches bg and tells notes to switch sprite
 func switchBG():
 	await get_tree().create_timer(1.4).timeout
-	$Sprite2D.visible = false
-	$Sprite2D2.visible = true
+	$Realism.visible = false
+	$WaterColor.visible = true
 	Global.note_universe = "B"
 	await get_tree().create_timer(1.4).timeout
-	$Sprite2D2.visible = false
-	$Sprite2D3.visible = true
+	$WaterColor.visible = false
+	$Punk.visible = true
 	Global.note_universe = "G"
 	await get_tree().create_timer(1.4).timeout
-	$Sprite2D3.visible = false
-	$Sprite2D4.visible = true
+	$Punk.visible = false
+	$EDM.visible = true
 	Global.note_universe = "P"
 	await get_tree().create_timer(1.4).timeout
-	$Sprite2D4.visible = false
-	$Sprite2D.visible = true
+	$EDM.visible = false
+	$Realism.visible = true
 	Global.note_universe = "R"
 	# I think you called this twice on accident - Evan
 	"
@@ -43,25 +43,25 @@ func switchBG():
 	#switchBG()
 	
 func goR():
-	$Sprite2D.visible = true
-	$Sprite2D2.visible = false
-	$Sprite2D3.visible = false
-	$Sprite2D4.visible = false
+	$Realism.visible = true
+	$WaterColor.visible = false
+	$Punk.visible = false
+	$EDM.visible = false
 func goG():
-	$Sprite2D.visible = false
-	$Sprite2D2.visible = true
-	$Sprite2D3.visible = false
-	$Sprite2D4.visible = false
+	$Realism.visible = false
+	$WaterColor.visible = true
+	$Punk.visible = false
+	$EDM.visible = false
 func goB():
-	$Sprite2D.visible = false
-	$Sprite2D2.visible = false
-	$Sprite2D3.visible = true
-	$Sprite2D4.visible = false
+	$Realism.visible = false
+	$WaterColor.visible = false
+	$Punk.visible = true
+	$EDM.visible = false
 func goP():
-	$Sprite2D.visible = false
-	$Sprite2D2.visible = false
-	$Sprite2D3.visible = false
-	$Sprite2D4.visible = true
+	$Realism.visible = false
+	$WaterColor.visible = false
+	$Punk.visible = false
+	$EDM.visible = true
 	
 """
 func _on_timer_timeout():
