@@ -13,6 +13,7 @@ var down = Vector2(1000,2000);
 
 func _on_midi_event( channel, event ):
 	#print(SMF.MIDIEventType)
+	# This chunk of code makes the notes spawn in groups of 3
 	if event.type==SMF.MIDIEventType.note_on:
 		var instance = note.instantiate()
 		if totalCounter == 0:
@@ -23,7 +24,6 @@ func _on_midi_event( channel, event ):
 			instance.position = right
 		if totalCounter == 3:
 			instance.position = down
-		instance.add_to_group("R") #make this a system that assigns universes
 		add_child(instance)
 		counter += 1
 		if counter == 3:
@@ -43,3 +43,4 @@ func _ready( ):
 		print(current_midi_input)
 	await get_tree().create_timer(1.4).timeout
 	$TheMusicPlayer.play()
+	

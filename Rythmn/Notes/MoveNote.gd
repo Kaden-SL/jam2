@@ -12,22 +12,42 @@ func _ready():
 func _process(delta):
 	# move note position towards the center of the screen
 	position = position.move_toward(centerScreen, delta * speed)
-	
 	if position == centerScreen:
 		queue_free()
-
+	
+	# Syncs the note sprite with the universe background
+	if Global.note_universe == "R":
+		$Sprite2D/AnimatedSprite2D.animation = "1 R"
+		_switch_groups("R","P")
+	if Global.note_universe == "G":
+		$Sprite2D/AnimatedSprite2D.animation = "2 G"
+		_switch_groups("G","R")
+	if Global.note_universe == "B":
+		$Sprite2D/AnimatedSprite2D.animation = "3 B"
+		_switch_groups("B","G")
+	if Global.note_universe == "P":
+		$Sprite2D/AnimatedSprite2D.animation = "4 P"
+		_switch_groups("P","B")
+		
 func _on_body_entered(body):
+	# if the notes touch the player, and the player is in the correct universe: hit the note
 	if body.is_in_group("Player"):
-		if self.is_in_group("R"):
-			if Global.current_universe == "R":
+		if self.is_in_group(Global.current_universe):
 				queue_free()
 				Global.bossHealth -= 1
 				print("PlayerHit")
 				if Global.bossHealth == 0:
-					print("dead")
-		# Make more of these to detect universes aligning
+					print("boss dead")
+
 	if body.is_in_group("DeathBox"):
 		print("DeathBoxHit")
 		Global.missedNotes -= 1
 		if Global.missedNotes == 0:
 			print("dead")
+
+# switches notes to be in correct universe
+func _switch_groups(NG,OG):
+	if self.is_in_group(OG):
+		self.remove_from_group(OG)
+	if self.is_in_group(NG) == false:
+		self.add_to_group(NG)

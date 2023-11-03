@@ -10,22 +10,30 @@ func _ready():
 	$Sprite2D4.visible = false
 	switchBG()
 
+# swtiches bg and tells notes to switch sprite
 func switchBG():
 	await get_tree().create_timer(1.4).timeout
 	$Sprite2D.visible = false
 	$Sprite2D2.visible = true
+	Global.note_universe = "B"
 	await get_tree().create_timer(1.4).timeout
 	$Sprite2D2.visible = false
 	$Sprite2D3.visible = true
+	Global.note_universe = "G"
 	await get_tree().create_timer(1.4).timeout
 	$Sprite2D3.visible = false
 	$Sprite2D4.visible = true
+	Global.note_universe = "P"
 	await get_tree().create_timer(1.4).timeout
 	$Sprite2D4.visible = false
 	$Sprite2D.visible = true
+	Global.note_universe = "R"
+	# I think you called this twice on accident - Evan
+	"
 	await get_tree().create_timer(1.4).timeout
 	$Sprite2D4.visible = false
 	$Sprite2D.visible = true
+	"
 	switchBG()
 	
 	
