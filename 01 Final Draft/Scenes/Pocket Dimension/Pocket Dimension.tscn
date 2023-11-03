@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://ceoq1o1kdn3un" path="res://stitching attempt/Background_Realism.png" id="2_h2077"]
 [ext_resource type="Texture2D" uid="uid://qhaqhi4wn78f" path="res://stitching attempt/versewalker_wc_bg_rough.png" id="3_djf1v"]
 [ext_resource type="Texture2D" uid="uid://b1b8yu1dvnnpk" path="res://stitching attempt/punk_temp_background.png" id="4_bc1qb"]
-[ext_resource type="Texture2D" uid="uid://lj2ov373cojw" path="res://All Levels/Art/Backgrounds/Placeholder_Background.png" id="5_gpghg"]
+[ext_resource type="Texture2D" uid="uid://uu7hfyojkk7f" path="res://01 Final Draft/Art Assets/Pocket Dimension/EDM Square.png" id="5_pl5ft"]
 [ext_resource type="Texture2D" uid="uid://5brok1fh7db5" path="res://Scene Transfer/Map/Untitled_ArtworkTempBG.png" id="6_5p1w1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f2l58"]
@@ -17,22 +17,21 @@ position = Vector2(971, 997)
 scale = Vector2(0.839999, 1)
 script = ExtResource("1_d5n3y")
 
-[node name="RBG" type="Sprite2D" parent="."]
+[node name="Realism" type="Sprite2D" parent="."]
 scale = Vector2(1.93, 1.93)
 texture = ExtResource("2_h2077")
 
-[node name="Bbg" type="Sprite2D" parent="."]
+[node name="WaterColor" type="Sprite2D" parent="."]
 position = Vector2(1, 1)
 scale = Vector2(0.41, 0.41)
 texture = ExtResource("3_djf1v")
 
-[node name="Gbg" type="Sprite2D" parent="."]
+[node name="Punk" type="Sprite2D" parent="."]
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("4_bc1qb")
 
-[node name="Pbg" type="Sprite2D" parent="."]
-scale = Vector2(0.4, 0.4)
-texture = ExtResource("5_gpghg")
+[node name="EDM" type="Sprite2D" parent="."]
+texture = ExtResource("5_pl5ft")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 visible = false

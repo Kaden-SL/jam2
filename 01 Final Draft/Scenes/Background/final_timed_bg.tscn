@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" path="res://01 Final Draft/Scripts/Background/FinalTimedBG.gd" id="1_enygb"]
 [ext_resource type="Texture2D" uid="uid://ceoq1o1kdn3un" path="res://stitching attempt/Background_Realism.png" id="2_adnfd"]
-[ext_resource type="Texture2D" uid="uid://qhaqhi4wn78f" path="res://stitching attempt/versewalker_wc_bg_rough.png" id="3_s4rsx"]
+[ext_resource type="Texture2D" uid="uid://bcaod3ep07hwe" path="res://01 Final Draft/Art Assets/Background/versewalker_wc_bg_rough.png" id="3_dthjj"]
 [ext_resource type="Texture2D" uid="uid://b1b8yu1dvnnpk" path="res://stitching attempt/punk_temp_background.png" id="4_tn0na"]
-[ext_resource type="Texture2D" uid="uid://lj2ov373cojw" path="res://All Levels/Art/Backgrounds/Placeholder_Background.png" id="5_83x4l"]
+[ext_resource type="Texture2D" uid="uid://ddp64qlweo4rb" path="res://01 Final Draft/Art Assets/Background/EDM Background.png" id="5_8h6p1"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_k74gk"]
 
@@ -13,21 +13,19 @@ position = Vector2(991, 998)
 physics_material_override = SubResource("PhysicsMaterial_k74gk")
 script = ExtResource("1_enygb")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Realism" type="Sprite2D" parent="."]
 scale = Vector2(6.06, 6.06)
 texture = ExtResource("2_adnfd")
 
-[node name="Sprite2D2" type="Sprite2D" parent="."]
-scale = Vector2(1.115, 1.115)
-texture = ExtResource("3_s4rsx")
+[node name="WaterColor" type="Sprite2D" parent="."]
+texture = ExtResource("3_dthjj")
 
-[node name="Sprite2D3" type="Sprite2D" parent="."]
+[node name="Punk" type="Sprite2D" parent="."]
 position = Vector2(-16, -152)
 scale = Vector2(1.11, 1.11)
 texture = ExtResource("4_tn0na")
 
-[node name="Sprite2D4" type="Sprite2D" parent="."]
-scale = Vector2(1.18, 1.18)
-texture = ExtResource("5_83x4l")
+[node name="EDM" type="Sprite2D" parent="."]
+texture = ExtResource("5_8h6p1")
 
 [node name="Timer" type="Timer" parent="."]
