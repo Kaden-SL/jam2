@@ -52,4 +52,10 @@ func _physics_process(delta):
 	if Input.is_action_just_released("right"):
 		self.position.y = playerOrigin_y
 		self.position.x = playerOrigin_x
-	pass
+	
+	if Input.is_action_just_pressed("up") or Input.is_action_just_pressed("down") or Input.is_action_just_pressed("left") or Input.is_action_just_pressed("right"):
+		await get_tree().create_timer(0.1).timeout
+		if Global.isTouchingNote == false:
+			Global.missedNotes -= 1;
+		else:
+			Global.isTouchingNote = false;

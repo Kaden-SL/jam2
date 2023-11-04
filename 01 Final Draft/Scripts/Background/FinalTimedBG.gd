@@ -1,5 +1,5 @@
 extends StaticBody2D
-
+@export var timeoutTime = 5
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -12,19 +12,19 @@ func _ready():
 
 # swtiches bg and tells notes to switch sprite
 func switchBG():
-	await get_tree().create_timer(1.4).timeout
+	await get_tree().create_timer(timeoutTime).timeout
 	$Realism.visible = false
 	$WaterColor.visible = true
 	Global.note_universe = "B"
-	await get_tree().create_timer(1.4).timeout
+	await get_tree().create_timer(timeoutTime).timeout
 	$WaterColor.visible = false
 	$Punk.visible = true
 	Global.note_universe = "G"
-	await get_tree().create_timer(1.4).timeout
+	await get_tree().create_timer(timeoutTime).timeout
 	$Punk.visible = false
 	$EDM.visible = true
 	Global.note_universe = "P"
-	await get_tree().create_timer(1.4).timeout
+	await get_tree().create_timer(timeoutTime).timeout
 	$EDM.visible = false
 	$Realism.visible = true
 	Global.note_universe = "R"
