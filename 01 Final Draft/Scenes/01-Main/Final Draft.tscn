@@ -55,7 +55,13 @@ script = ExtResource("7_kbl1w")
 stream = ExtResource("9_11xf4")
 
 [node name="Perfect" parent="." groups=["Perfect"] instance=ExtResource("10_l4vkr")]
+position = Vector2(1000, 1000)
+scale = Vector2(31, 41)
 
 [node name="Good" parent="." groups=["Good"] instance=ExtResource("10_l4vkr")]
+position = Vector2(1000, 1000)
+scale = Vector2(28, 37)
 
 [node name="Miss" parent="." groups=["Miss"] instance=ExtResource("10_l4vkr")]
+position = Vector2(1000, 1000)
+scale = Vector2(25, 34)

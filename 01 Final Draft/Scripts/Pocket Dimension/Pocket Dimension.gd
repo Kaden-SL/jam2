@@ -3,10 +3,10 @@ extends StaticBody2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$Realism.visible = false
+	$Realism.visible = true
 	$WaterColor.visible = false
 	$Punk.visible = false
-	$EDM.visible = true
+	$EDM.visible = false
 	#bool inR = true
 	#bool inG = false
 	#bool inB = false
@@ -15,28 +15,28 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
-	if Input.is_action_just_pressed("R") && $EDM.visible == false:
-		$EDM.visible = true
-		$Realism.visible = false
+	if Input.is_action_just_pressed("R") && $Realism.visible == false:
+		$EDM.visible = false
+		$Realism.visible = true
 		$WaterColor.visible = false
 		$Punk.visible = false
 		#$Player.play("R")
-	if Input.is_action_just_pressed("B") && $Realism.visible == false:
-		$Realism.visible = true
-		$WaterColor.visible = false
+	if Input.is_action_just_pressed("B") && $WaterColor.visible == false:
+		$Realism.visible = false
+		$WaterColor.visible = true
 		$EDM.visible = false
 		$Punk.visible = false
 		#$Player.play("B")
-	if Input.is_action_just_pressed("G") && $WaterColor.visible == false:
-		$WaterColor.visible = true
+	if Input.is_action_just_pressed("G") && $Punk.visible == false:
+		$WaterColor.visible = false
 		$Realism.visible = false
 		$EDM.visible = false
-		$Punk.visible = false
-		#$Player.play("G")
-	if Input.is_action_just_pressed("P") && $Punk.visible == false:
 		$Punk.visible = true
+		#$Player.play("G")
+	if Input.is_action_just_pressed("P") && $EDM.visible == false:
+		$Punk.visible = false
 		$Realism.visible = false
-		$EDM.visible = false
+		$EDM.visible = true
 		$WaterColor.visible = false
 		#$Player.play("P")
 	pass
