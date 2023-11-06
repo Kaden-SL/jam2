@@ -41,6 +41,8 @@ func _on_body_entered(body):
 				print("PlayerHit")
 				
 				if Global.bossHealth == 0:
+					get_tree().reload_current_scene()
+					get_tree().change_scene_to_file("res://01 Final Draft/Scenes/game_over_screen.tscn")
 					print("boss dead")
 	
 	#if body.is_in_group("DeathBox"):
@@ -73,4 +75,6 @@ func _on_area_entered(area):
 		Global.missedNotes -= 1
 		if Global.missedNotes == 0:
 			print("dead")
+			get_tree().reload_current_scene()
+			get_tree().change_scene_to_file("res://01 Final Draft/Scenes/game_over_screen.tscn")
 		queue_free()
