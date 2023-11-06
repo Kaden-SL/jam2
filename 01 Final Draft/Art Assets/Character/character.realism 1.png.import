@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dsiwwrr86uyk3"
-path="res://.godot/imported/boss.realism.png-626dd4b53629df344c7ab72677fd709f.ctex"
+uid="uid://e1dalapn1gfg"
+path="res://.godot/imported/character.realism 1.png-13c88dbf62c7b465ccfe0b7956b744f4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://01 Final Draft/Art Assets/Boss/boss.realism.png"
-dest_files=["res://.godot/imported/boss.realism.png-626dd4b53629df344c7ab72677fd709f.ctex"]
+source_file="res://01 Final Draft/Art Assets/Character/character.realism 1.png"
+dest_files=["res://.godot/imported/character.realism 1.png-13c88dbf62c7b465ccfe0b7956b744f4.ctex"]
 
 [params]
 
