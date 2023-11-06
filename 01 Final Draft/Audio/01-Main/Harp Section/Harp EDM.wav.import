@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://by3l6l5t8t7xb"
+path="res://.godot/imported/Harp EDM.wav-909ef47ff0ea934c207a2da2a5a213b5.sample"
+
+[deps]
+
+source_file="res://01 Final Draft/Audio/01-Main/Harp Section/Harp EDM.wav"
+dest_files=["res://.godot/imported/Harp EDM.wav-909ef47ff0ea934c207a2da2a5a213b5.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

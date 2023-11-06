@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://d1hjb7035remk"
+path="res://.godot/imported/EDM.wav-743c5fae2549b4580377d3c8d047c219.sample"
+
+[deps]
+
+source_file="res://01 Final Draft/Audio/01-Main/EDM Portion/EDM.wav"
+dest_files=["res://.godot/imported/EDM.wav-743c5fae2549b4580377d3c8d047c219.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
