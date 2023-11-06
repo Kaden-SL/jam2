@@ -1,0 +1,114 @@
+[gd_scene load_steps=14 format=3 uid="uid://cfxcbqyagrgo4"]
+
+[ext_resource type="Script" path="res://01 Final Draft/Scripts/Notes/finalMoveNote.gd" id="1_1sdu8"]
+[ext_resource type="Texture2D" uid="uid://dyn6ypdpaiukx" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Neutral/enemies.realism-1.png" id="2_717vl"]
+[ext_resource type="Texture2D" uid="uid://ct4omj31h3qjr" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Neutral/punk_enemy_normal.png" id="3_4hj18"]
+[ext_resource type="Texture2D" uid="uid://b6rs1c04uv2df" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Neutral/versewalker_wc_enemy_base.png" id="4_l58tb"]
+[ext_resource type="Texture2D" uid="uid://cgvpbpf6dwuse" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Neutral/EDM Neutral.png" id="5_bwdsd"]
+[ext_resource type="Texture2D" uid="uid://5v2qlq44w031" path="res://01 Final Draft/Art Assets/Notes/Enemies_ attack/versewalker_wc_enemy_attack1.png" id="6_muod1"]
+[ext_resource type="Texture2D" uid="uid://dhomnufegxrg8" path="res://01 Final Draft/Art Assets/Notes/Enemies_ attack/versewalker_wc_enemy_attack2.png" id="7_cd744"]
+[ext_resource type="Texture2D" uid="uid://cqqyra7our2hu" path="res://01 Final Draft/Art Assets/Notes/Enemies_ attack/versewalker_wc_enemy_attack3.png" id="8_jc5eb"]
+[ext_resource type="Texture2D" uid="uid://p1aq1xiicr33" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Death/versewalker_wc_enemy_death1.png" id="9_fpt26"]
+[ext_resource type="Texture2D" uid="uid://dus5o050dntxl" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Death/versewalker_wc_enemy_death2.png" id="10_p7gcd"]
+[ext_resource type="Texture2D" uid="uid://ptb6q1x6gqam" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Death/versewalker_wc_enemy_death3.png" id="11_kee43"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l7rsm"]
+size = Vector2(96, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xndp3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_717vl")
+}],
+"loop": true,
+"name": &"1 R",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_4hj18")
+}],
+"loop": true,
+"name": &"2 G",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_l58tb")
+}],
+"loop": true,
+"name": &"3 B",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_bwdsd")
+}],
+"loop": true,
+"name": &"4 P",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 2.0,
+"texture": ExtResource("6_muod1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_cd744")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_jc5eb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_cd744")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_jc5eb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_cd744")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_jc5eb")
+}],
+"loop": true,
+"name": &"wc_enemy_attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 2.0,
+"texture": ExtResource("9_fpt26")
+}, {
+"duration": 1.5,
+"texture": ExtResource("10_p7gcd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_kee43")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_kee43")
+}],
+"loop": true,
+"name": &"wc_enemy_death",
+"speed": 5.0
+}]
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_1sdu8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_l7rsm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.13, 0.13)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sprite2D"]
+scale = Vector2(1.03339, 0.966636)
+sprite_frames = SubResource("SpriteFrames_xndp3")
+animation = &"wc_enemy_attack"
+frame_progress = 0.829091
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

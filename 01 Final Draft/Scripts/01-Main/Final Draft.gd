@@ -3,7 +3,7 @@ extends Node2D
 @onready var midi_player:MidiPlayer = $GodotMIDIPlayer
 const SMF = preload( "res://addons/midi/SMF.gd" )
 const Utility = preload( "res://addons/midi/Utility.gd" )
-var note = preload("res://Rythmn/Notes/note.tscn")
+var note = preload("res://01 Final Draft/Scenes/Notes/finalnote.tscn")
 var counter = 0
 var totalCounter = 0
 var left = Vector2(0,1000);

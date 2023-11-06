@@ -1,9 +1,9 @@
 [gd_scene load_steps=9 format=3 uid="uid://0dumlb557eqt"]
 
 [ext_resource type="Script" path="res://01 Final Draft/Scripts/Pocket Dimension/Pocket Dimension.gd" id="1_d5n3y"]
-[ext_resource type="Texture2D" uid="uid://ceoq1o1kdn3un" path="res://stitching attempt/Background_Realism.png" id="2_h2077"]
-[ext_resource type="Texture2D" uid="uid://qhaqhi4wn78f" path="res://stitching attempt/versewalker_wc_bg_rough.png" id="3_djf1v"]
-[ext_resource type="Texture2D" uid="uid://b1b8yu1dvnnpk" path="res://stitching attempt/punk_temp_background.png" id="4_bc1qb"]
+[ext_resource type="Texture2D" uid="uid://bspxh58e2g5fc" path="res://01 Final Draft/Art Assets/Pocket Dimension/realism.pocketdim.png" id="2_db3ps"]
+[ext_resource type="Texture2D" uid="uid://dfcwdpkjhe54h" path="res://01 Final Draft/Art Assets/Pocket Dimension/wc_pocketdim.png" id="3_767lh"]
+[ext_resource type="Texture2D" uid="uid://btfs5m28ynjpk" path="res://01 Final Draft/Art Assets/Pocket Dimension/Punk_Personal_Dimension.png" id="4_xklqg"]
 [ext_resource type="Texture2D" uid="uid://uu7hfyojkk7f" path="res://01 Final Draft/Art Assets/Pocket Dimension/EDM Square.png" id="5_pl5ft"]
 [ext_resource type="Texture2D" uid="uid://5brok1fh7db5" path="res://Scene Transfer/Map/Untitled_ArtworkTempBG.png" id="6_5p1w1"]
 
@@ -13,22 +13,17 @@ size = Vector2(26.6342, 4.89394)
 [sub_resource type="CircleShape2D" id="CircleShape2D_7sr5e"]
 
 [node name="Pocket Dimension" type="StaticBody2D" groups=["DeathBox"]]
-position = Vector2(971, 997)
-scale = Vector2(0.839999, 1)
+position = Vector2(1000, 1000)
 script = ExtResource("1_d5n3y")
 
 [node name="Realism" type="Sprite2D" parent="."]
-scale = Vector2(1.93, 1.93)
-texture = ExtResource("2_h2077")
+texture = ExtResource("2_db3ps")
 
 [node name="WaterColor" type="Sprite2D" parent="."]
-position = Vector2(1, 1)
-scale = Vector2(0.41, 0.41)
-texture = ExtResource("3_djf1v")
+texture = ExtResource("3_767lh")
 
 [node name="Punk" type="Sprite2D" parent="."]
-scale = Vector2(0.4, 0.4)
-texture = ExtResource("4_bc1qb")
+texture = ExtResource("4_xklqg")
 
 [node name="EDM" type="Sprite2D" parent="."]
 texture = ExtResource("5_pl5ft")

@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://01 Final Draft/Scripts/Background/FinalTimedBG.gd" id="1_enygb"]
 [ext_resource type="Texture2D" uid="uid://dos22nh8qs08r" path="res://01 Final Draft/Art Assets/Background/background.realism.png" id="2_ejbt5"]
-[ext_resource type="Texture2D" uid="uid://bcaod3ep07hwe" path="res://01 Final Draft/Art Assets/Background/versewalker_wc_bg_rough.png" id="3_dthjj"]
-[ext_resource type="Texture2D" uid="uid://b1b8yu1dvnnpk" path="res://stitching attempt/punk_temp_background.png" id="4_tn0na"]
+[ext_resource type="Texture2D" uid="uid://b4o52fdpfp7pv" path="res://01 Final Draft/Art Assets/Background/versewalker_wc_bg.png" id="3_gs0wh"]
+[ext_resource type="Texture2D" uid="uid://cpyhlnb1gxswx" path="res://01 Final Draft/Art Assets/Background/Punk_Background.png" id="4_7ufsl"]
 [ext_resource type="Texture2D" uid="uid://ddp64qlweo4rb" path="res://01 Final Draft/Art Assets/Background/EDM Background.png" id="5_8h6p1"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_k74gk"]
@@ -17,12 +17,10 @@ script = ExtResource("1_enygb")
 texture = ExtResource("2_ejbt5")
 
 [node name="WaterColor" type="Sprite2D" parent="."]
-texture = ExtResource("3_dthjj")
+texture = ExtResource("3_gs0wh")
 
 [node name="Punk" type="Sprite2D" parent="."]
-position = Vector2(-16, -152)
-scale = Vector2(1.11, 1.11)
-texture = ExtResource("4_tn0na")
+texture = ExtResource("4_7ufsl")
 
 [node name="EDM" type="Sprite2D" parent="."]
 texture = ExtResource("5_8h6p1")
