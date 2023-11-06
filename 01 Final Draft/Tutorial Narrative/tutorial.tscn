@@ -1,0 +1,78 @@
+[gd_scene load_steps=7 format=3 uid="uid://boyaxwsxey5v6"]
+
+[ext_resource type="Script" path="res://01 Final Draft/Tutorial Narrative/tutorial.gd" id="1_lxvia"]
+[ext_resource type="Texture2D" uid="uid://cvwtmldkfb3yp" path="res://01 Final Draft/Tutorial Narrative/Tutorial Narrative.png" id="2_sa32f"]
+
+[sub_resource type="Animation" id="Animation_370ro"]
+resource_name = " Fade In"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_sjdtf"]
+resource_name = "Fade Out"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_t88t4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1xvmj"]
+_data = {
+" Fade In": SubResource("Animation_370ro"),
+"Fade Out": SubResource("Animation_sjdtf"),
+"RESET": SubResource("Animation_t88t4")
+}
+
+[node name="Tutorial" type="Node2D"]
+script = ExtResource("1_lxvia")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1000, 1000)
+texture = ExtResource("2_sa32f")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -379.0
+offset_top = -323.0
+offset_right = -339.0
+offset_bottom = -283.0
+scale = Vector2(72.5618, 75.9954)
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_1xvmj")
+}
