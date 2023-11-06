@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://b5dcwiup2l7nv"]
+[gd_scene load_steps=12 format=3 uid="uid://b5dcwiup2l7nv"]
 
 [ext_resource type="Script" path="res://01 Final Draft/Scripts/01-Main/Final Draft.gd" id="1_0qwpp"]
 [ext_resource type="Script" path="res://addons/midi/MidiPlayer.gd" id="2_1xniy"]
@@ -9,10 +9,12 @@
 [ext_resource type="Script" path="res://01 Final Draft/Scripts/01-Main/FinalCurrentUniverse.gd" id="7_kbl1w"]
 [ext_resource type="PackedScene" uid="uid://0dumlb557eqt" path="res://01 Final Draft/Scenes/Pocket Dimension/Pocket Dimension.tscn" id="8_fn1wf"]
 [ext_resource type="AudioStream" uid="uid://djp5ond4op60s" path="res://01 Final Draft/Audio/01-Main/AcrylicRock.wav" id="9_11xf4"]
+[ext_resource type="AudioStream" uid="uid://dkq0tvw54cmqd" path="res://01 Final Draft/Audio/01-Main/ClassicalSong.wav" id="9_wm3sr"]
 [ext_resource type="PackedScene" uid="uid://uuky1ny3r7jt" path="res://01 Final Draft/Scenes/Notes/Final_Note_Hit_Level.tscn" id="10_l4vkr"]
 
 [node name="Final Draft" type="Node2D"]
 script = ExtResource("1_0qwpp")
+halfwayThroughSong = 10
 
 [node name="GodotMIDIPlayer" type="Node" parent="."]
 script = ExtResource("2_1xniy")
@@ -52,6 +54,15 @@ scale = Vector2(4.92, 6.84)
 script = ExtResource("7_kbl1w")
 
 [node name="TheMusicPlayer" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_wm3sr")
+
+[node name="MusicPlayerRock" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_11xf4")
+
+[node name="MusicPlayerMelodic" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_wm3sr")
+
+[node name="MusicPlayerEDM" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("9_11xf4")
 
 [node name="Perfect" parent="." groups=["Perfect"] instance=ExtResource("10_l4vkr")]

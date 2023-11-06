@@ -10,6 +10,7 @@ var left = Vector2(0,1000);
 var right = Vector2(2000,1000);
 var up = Vector2(1000,0); 
 var down = Vector2(1000,2000);
+@export var halfwayThroughSong = 0;
 
 func _on_midi_event( channel, event ):
 	#print(SMF.MIDIEventType)
@@ -43,3 +44,48 @@ func _ready( ):
 		print(current_midi_input)
 	await get_tree().create_timer(1.4).timeout
 	$TheMusicPlayer.play()
+	$MusicPlayerRock.stop()
+	$MusicPlayerMelodic.stop()
+	$MusicPlayerEDM.stop()
+	
+func _process(delta):
+	if Global.current_universe == "R":
+		if $MusicPlayerRock.has_stream_playback():
+			$TheMusicPlayer.play()
+			$TheMusicPlayer.seek($MusicPlayerRock.get_playback_position())
+			$MusicPlayerRock.stop()
+		_CheckHalfTime($TheMusicPlayer)
+	
+	if Global.current_universe == "G":
+		if $TheMusicPlayer.has_stream_playback():
+			$MusicPlayerRock.play()
+			$MusicPlayerRock.seek($TheMusicPlayer.get_playback_position())
+			$TheMusicPlayer.stop()
+		_CheckHalfTime($MusicPlayerRock)
+			
+	if Global.current_universe == "B":
+		if $TheMusicPlayer.has_stream_playback():
+			_CheckHalfTime($TheMusicPlayer)
+			
+		if $MusicPlayerRock.has_stream_playback():
+			_CheckHalfTime($MusicPlayerRock)
+			
+		if $MusicPlayerEDM.has_stream_playback():
+			$MusicPlayerMelodic.play()
+			$MusicPlayerMelodic.seek($MusicPlayerEDM.get_playback_position())
+			$MusicPlayerEDM.stop()
+			
+	if Global.current_universe == "P":
+		if $MusicPlayerMelodic.has_stream_playback():
+			$MusicPlayerEDM.play()
+			$MusicPlayerEDM.seek($MusicPlayerMelodic.get_playback_position())
+			$MusicPlayerMelodic.stop()
+func _CheckHalfTime(AudioPlayer):
+	if AudioPlayer.get_playback_position() >= halfwayThroughSong:
+		$MusicPlayerMelodic.play()
+		$MusicPlayerMelodic.seek(AudioPlayer.get_playback_position())
+		$TheMusicPlayer.stop()
+		$MusicPlayerRock.stop()
+		Global.isHalfwayThroughSong = true;
+	# print(AudioPlayer.get_playback_position())
+		

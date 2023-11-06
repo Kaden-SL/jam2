@@ -9,32 +9,31 @@ func _ready():
 	$Punk.visible = false
 	$EDM.visible = false
 	switchBG()
-
+	
 # swtiches bg and tells notes to switch sprite
 func switchBG():
-	await get_tree().create_timer(timeoutTime).timeout
-	$Realism.visible = false
-	$WaterColor.visible = true
-	Global.note_universe = "B"
-	await get_tree().create_timer(timeoutTime).timeout
-	$WaterColor.visible = false
-	$Punk.visible = true
-	Global.note_universe = "G"
-	await get_tree().create_timer(timeoutTime).timeout
-	$Punk.visible = false
-	$EDM.visible = true
-	Global.note_universe = "P"
-	await get_tree().create_timer(timeoutTime).timeout
-	$EDM.visible = false
-	$Realism.visible = true
-	Global.note_universe = "R"
-	# I think you called this twice on accident - Evan
-	"
-	await get_tree().create_timer(1.4).timeout
-	$Sprite2D4.visible = false
-	$Sprite2D.visible = true
-	"
-	switchBG()
+	if Global.isHalfwayThroughSong == false:
+		await get_tree().create_timer(timeoutTime).timeout
+		$Realism.visible = false
+		$Punk.visible = true
+		Global.note_universe = "G"
+		await get_tree().create_timer(timeoutTime).timeout
+		$Punk.visible = false
+		$Realism.visible = true
+		Global.note_universe = "R"
+		switchBG()
+	else:
+		await get_tree().create_timer(timeoutTime).timeout
+		$EDM.visible = false
+		$Punk.visible = false
+		$Realism.visible = false
+		$WaterColor.visible = true
+		Global.note_universe = "B"
+		await get_tree().create_timer(timeoutTime).timeout
+		$WaterColor.visible = false
+		$EDM.visible = true
+		Global.note_universe = "P"
+		switchBG()
 	
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.

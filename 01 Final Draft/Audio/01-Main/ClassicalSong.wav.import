@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dkq0tvw54cmqd"
+path="res://.godot/imported/ClassicalSong.wav-5a156e57e320d8a91fc5fa37e56ecad2.sample"
+
+[deps]
+
+source_file="res://01 Final Draft/Audio/01-Main/ClassicalSong.wav"
+dest_files=["res://.godot/imported/ClassicalSong.wav-5a156e57e320d8a91fc5fa37e56ecad2.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

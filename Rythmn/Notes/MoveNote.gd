@@ -17,16 +17,16 @@ func _process(delta):
 	# Syncs the note sprite with the universe background
 	if Global.note_universe == "R":
 		$Sprite2D/AnimatedSprite2D.animation = "1 R"
-		_switch_groups("R","P")
+		_switch_groups("R","B","G","P")
 	if Global.note_universe == "B":
 		$Sprite2D/AnimatedSprite2D.animation = "3 B"
-		_switch_groups("B","R")
+		_switch_groups("B","R","G","P")
 	if Global.note_universe == "G":
 		$Sprite2D/AnimatedSprite2D.animation = "2 G"
-		_switch_groups("G","B")
+		_switch_groups("G","B","R","P")
 	if Global.note_universe == "P":
 		$Sprite2D/AnimatedSprite2D.animation = "4 P"
-		_switch_groups("P","G")
+		_switch_groups("P","G","B","R")
 		
 func _on_body_entered(body):
 	# if the notes touch the player, and the player is in the correct universe: hit the note
@@ -51,9 +51,13 @@ func _on_body_entered(body):
 	
 
 # switches notes to be in correct universe
-func _switch_groups(NG,OG):
-	if self.is_in_group(OG):
-		self.remove_from_group(OG)
+func _switch_groups(NG,OG1,OG2,OG3):
+	if self.is_in_group(OG1):
+		self.remove_from_group(OG1)
+	if self.is_in_group(OG2):
+		self.remove_from_group(OG2)
+	if self.is_in_group(OG3):
+		self.remove_from_group(OG3)
 	if self.is_in_group(NG) == false:
 		self.add_to_group(NG)
 

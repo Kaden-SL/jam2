@@ -15,25 +15,25 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
-	if Input.is_action_just_pressed("R") && $Realism.visible == false:
+	if Input.is_action_just_pressed("R") && $Realism.visible == false && Global.isHalfwayThroughSong == false:
 		$EDM.visible = false
 		$Realism.visible = true
 		$WaterColor.visible = false
 		$Punk.visible = false
 		#$Player.play("R")
-	if Input.is_action_just_pressed("B") && $WaterColor.visible == false:
+	if Input.is_action_just_pressed("B") && $WaterColor.visible == false && Global.isHalfwayThroughSong == true:
 		$Realism.visible = false
 		$WaterColor.visible = true
 		$EDM.visible = false
 		$Punk.visible = false
 		#$Player.play("B")
-	if Input.is_action_just_pressed("G") && $Punk.visible == false:
+	if Input.is_action_just_pressed("G") && $Punk.visible == false && Global.isHalfwayThroughSong == false:
 		$WaterColor.visible = false
 		$Realism.visible = false
 		$EDM.visible = false
 		$Punk.visible = true
 		#$Player.play("G")
-	if Input.is_action_just_pressed("P") && $EDM.visible == false:
+	if Input.is_action_just_pressed("P") && $EDM.visible == false && Global.isHalfwayThroughSong == true:
 		$Punk.visible = false
 		$Realism.visible = false
 		$EDM.visible = true
