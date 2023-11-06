@@ -1,15 +1,18 @@
 extends CharacterBody2D
 
-var speed = 250
-var playerOrigin_x
-var playerOrigin_y
+var speed = 20000
+var playerOrigin = Vector2()
+var max_distance_to_center = 500
+#var speed = 250
+#var playerOrigin_x
+#var playerOrigin_y
 var current_universe = Global.current_universe
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	playerOrigin_x = self.position.x
-	playerOrigin_y = self.position.y
-	pass # Replace with function body.
+	playerOrigin = self.position
+	#playerOrigin_x = self.position.x
+	#playerOrigin_y = self.position.y
 	
 func _process(_delta):
 	if Input.is_action_just_pressed("R") && Global.sceneTiming == false:
@@ -30,28 +33,23 @@ func _physics_process(delta):
 	velocity = Vector2()
 	
 	if Input.is_action_just_pressed("down"):
-		self.position.y += speed
-	if Input.is_action_just_released("down"):
-		self.position.y = playerOrigin_y
-		self.position.x = playerOrigin_x
-	
+		velocity.y += 1
 	if Input.is_action_just_pressed("up"):
-		self.position.y -= speed
-	if Input.is_action_just_released("up"):
-		self.position.y = playerOrigin_y
-		self.position.x = playerOrigin_x
-	
+		velocity.y -= 1
 	if Input.is_action_just_pressed("left"):
-		self.position.x -= speed
-	if Input.is_action_just_released("left"):
-		self.position.y = playerOrigin_y
-		self.position.x = playerOrigin_x
-	
+		velocity.x -= 1
 	if Input.is_action_just_pressed("right"):
-		self.position.x += speed
-	if Input.is_action_just_released("right"):
-		self.position.y = playerOrigin_y
-		self.position.x = playerOrigin_x
+		velocity.x += 1
+	if velocity.length() > 0:
+		velocity = velocity.normalized() * speed * delta
+	
+	self.position += velocity
+	
+	if self.position.distance_to(playerOrigin) > max_distance_to_center:
+		self.position = playerOrigin
+		
+	if not Input.is_action_pressed("down") and not Input.is_action_pressed("up") and not Input.is_action_pressed("left") and not Input.is_action_pressed("right"):
+		self.position = playerOrigin
 	
 	if Input.is_action_just_pressed("up") or Input.is_action_just_pressed("down") or Input.is_action_just_pressed("left") or Input.is_action_just_pressed("right"):
 		await get_tree().create_timer(0.1).timeout
