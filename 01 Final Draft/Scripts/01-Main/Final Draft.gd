@@ -50,42 +50,32 @@ func _ready( ):
 	
 func _process(delta):
 	if Global.current_universe == "R":
-		if $MusicPlayerRock.has_stream_playback():
-			$TheMusicPlayer.play()
-			$TheMusicPlayer.seek($MusicPlayerRock.get_playback_position())
-			$MusicPlayerRock.stop()
+		_SwitchAudioPlayer($TheMusicPlayer,$MusicPlayerRock,$MusicPlayerMelodic,$MusicPlayerEDM)
 		_CheckHalfTime($TheMusicPlayer)
 	
 	if Global.current_universe == "G":
-		if $TheMusicPlayer.has_stream_playback():
-			$MusicPlayerRock.play()
-			$MusicPlayerRock.seek($TheMusicPlayer.get_playback_position())
-			$TheMusicPlayer.stop()
+		_SwitchAudioPlayer($MusicPlayerRock,$TheMusicPlayer,$MusicPlayerMelodic,$MusicPlayerEDM)
 		_CheckHalfTime($MusicPlayerRock)
-			
+	
 	if Global.current_universe == "B":
-		if $TheMusicPlayer.has_stream_playback():
-			_CheckHalfTime($TheMusicPlayer)
-			
-		if $MusicPlayerRock.has_stream_playback():
-			_CheckHalfTime($MusicPlayerRock)
-			
-		if $MusicPlayerEDM.has_stream_playback():
-			$MusicPlayerMelodic.play()
-			$MusicPlayerMelodic.seek($MusicPlayerEDM.get_playback_position())
-			$MusicPlayerEDM.stop()
-			
+		_SwitchAudioPlayer($MusicPlayerMelodic,$MusicPlayerEDM,$MusicPlayerRock,$TheMusicPlayer)
 	if Global.current_universe == "P":
-		if $MusicPlayerMelodic.has_stream_playback():
-			$MusicPlayerEDM.play()
-			$MusicPlayerEDM.seek($MusicPlayerMelodic.get_playback_position())
-			$MusicPlayerMelodic.stop()
+		_SwitchAudioPlayer($MusicPlayerEDM,$MusicPlayerMelodic,$MusicPlayerRock,$TheMusicPlayer)
+
 func _CheckHalfTime(AudioPlayer):
 	if AudioPlayer.get_playback_position() >= halfwayThroughSong:
-		$MusicPlayerMelodic.play()
-		$MusicPlayerMelodic.seek(AudioPlayer.get_playback_position())
-		$TheMusicPlayer.stop()
-		$MusicPlayerRock.stop()
 		Global.isHalfwayThroughSong = true;
 	# print(AudioPlayer.get_playback_position())
-		
+func _SwitchAudioPlayer(NP,OP1,OP2,OP3):
+	if NP.has_stream_playback() == false:
+		NP.play()
+		if OP1.has_stream_playback():
+			NP.seek(OP1.get_playback_position())
+			OP1.stop()
+		if OP2.has_stream_playback():
+			NP.seek(OP2.get_playback_position())
+			OP2.stop()
+		if OP3.has_stream_playback():
+			NP.seek(OP3.get_playback_position())
+			OP3.stop()
+
