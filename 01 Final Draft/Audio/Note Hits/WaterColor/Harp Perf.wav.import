@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bw3vjnach3x1h"
+path="res://.godot/imported/Harp Perf.wav-4d52837e0e08c19251d2502e3893464d.sample"
+
+[deps]
+
+source_file="res://01 Final Draft/Audio/Note Hits/WaterColor/Harp Perf.wav"
+dest_files=["res://.godot/imported/Harp Perf.wav-4d52837e0e08c19251d2502e3893464d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
