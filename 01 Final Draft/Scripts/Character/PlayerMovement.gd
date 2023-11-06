@@ -1,15 +1,15 @@
 extends CharacterBody2D
 
-var speed = 20000
-var playerOrigin = Vector2()
-var max_distance_to_center = 600
+var speed = 250
+var playerOrigin_x
+var playerOrigin_y
 var current_universe = Global.current_universe
-var sprite
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	playerOrigin = self.position
-	sprite = $"Player Animations"
+	playerOrigin_x = self.position.x
+	playerOrigin_y = self.position.y
+	pass # Replace with function body.
 	
 func _process(_delta):
 	if Input.is_action_just_pressed("R") && Global.sceneTiming == false:
@@ -25,31 +25,33 @@ func _process(_delta):
 		$"Player Animations".play("4 P")
 		Global.current_universe = "P"
 
+# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
 	velocity = Vector2()
 	
 	if Input.is_action_just_pressed("down"):
-		velocity.y += 1
+		self.position.y += speed
+	if Input.is_action_just_released("down"):
+		self.position.y = playerOrigin_y
+		self.position.x = playerOrigin_x
+	
 	if Input.is_action_just_pressed("up"):
-		velocity.y -= 1
+		self.position.y -= speed
+	if Input.is_action_just_released("up"):
+		self.position.y = playerOrigin_y
+		self.position.x = playerOrigin_x
+	
 	if Input.is_action_just_pressed("left"):
-		velocity.x -= 1
-		#sprite.set_flip_h(true)
-		sprite.set_flip_h(false)
+		self.position.x -= speed
+	if Input.is_action_just_released("left"):
+		self.position.y = playerOrigin_y
+		self.position.x = playerOrigin_x
+	
 	if Input.is_action_just_pressed("right"):
-		velocity.x += 1
-		#sprite.set_flip_h(false)
-		sprite.set_flip_h(true)
-	if velocity.length() > 0:
-		velocity = velocity.normalized() * speed * delta
-	
-	self.position += velocity
-	
-	if self.position.distance_to(playerOrigin) > max_distance_to_center:
-		self.position = playerOrigin
-		
-	if not Input.is_action_pressed("down") and not Input.is_action_pressed("up") and not Input.is_action_pressed("left") and not Input.is_action_pressed("right"):
-		self.position = playerOrigin
+		self.position.x += speed
+	if Input.is_action_just_released("right"):
+		self.position.y = playerOrigin_y
+		self.position.x = playerOrigin_x
 	
 	if Input.is_action_just_pressed("up") or Input.is_action_just_pressed("down") or Input.is_action_just_pressed("left") or Input.is_action_just_pressed("right"):
 		await get_tree().create_timer(0.1).timeout

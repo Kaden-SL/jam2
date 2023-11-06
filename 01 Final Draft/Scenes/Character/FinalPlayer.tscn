@@ -73,4 +73,4 @@ shape = SubResource("RectangleShape2D_mdjjc")
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_61lat")
 animation = &"Realism_Character"
-frame_progress = 0.221817
+frame_progress = 0.967844
