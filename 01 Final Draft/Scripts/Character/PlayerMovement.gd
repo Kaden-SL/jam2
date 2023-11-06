@@ -12,16 +12,16 @@ func _ready():
 	pass # Replace with function body.
 	
 func _process(_delta):
-	if Input.is_action_just_pressed("R") && Global.isHalfwayThroughSong == false:
+	if Input.is_action_just_pressed("R") && Global.sceneTiming == false:
 		$"Player Animations".play("1 R")
 		Global.current_universe = "R"
-	if Input.is_action_just_pressed("G") && Global.isHalfwayThroughSong == false:
+	if Input.is_action_just_pressed("G") && Global.sceneTiming == false:
 		$"Player Animations".play("2 G")
 		Global.current_universe = "G"
-	if Input.is_action_just_pressed("B") && Global.isHalfwayThroughSong == true:
+	if Input.is_action_just_pressed("B") && Global.isHalfwayThroughSong == true && Global.sceneTiming == true:
 		$"Player Animations".play("3 B")
 		Global.current_universe = "B"
-	if Input.is_action_just_pressed("P") && Global.isHalfwayThroughSong == true:
+	if Input.is_action_just_pressed("P") && Global.isHalfwayThroughSong == true && Global.sceneTiming == true:
 		$"Player Animations".play("4 P")
 		Global.current_universe = "P"
 

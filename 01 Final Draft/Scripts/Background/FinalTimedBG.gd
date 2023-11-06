@@ -24,6 +24,7 @@ func switchBG():
 		switchBG()
 	else:
 		await get_tree().create_timer(timeoutTime).timeout
+		Global.sceneTiming = true;
 		$EDM.visible = false
 		$Punk.visible = false
 		$Realism.visible = false
