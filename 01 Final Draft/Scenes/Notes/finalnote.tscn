@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=3 uid="uid://cfxcbqyagrgo4"]
+[gd_scene load_steps=64 format=3 uid="uid://cfxcbqyagrgo4"]
 
 [ext_resource type="Script" path="res://01 Final Draft/Scripts/Notes/finalMoveNote.gd" id="1_1sdu8"]
 [ext_resource type="Texture2D" uid="uid://dyn6ypdpaiukx" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Neutral/enemies.realism-1.png" id="2_717vl"]
@@ -55,6 +55,12 @@
 [ext_resource type="Texture2D" uid="uid://cbpfyp640scot" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Death/dead.enemies.realism-13.png" id="47_s0god"]
 [ext_resource type="Texture2D" uid="uid://ds67w2c6mrjgi" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Death/dead.enemies.realism-14.png" id="48_hwb4d"]
 [ext_resource type="Texture2D" uid="uid://c17q3hu2slp3v" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Death/dead.enemies.realism-15.png" id="49_ynjus"]
+[ext_resource type="AudioStream" uid="uid://ns3mkvpxtnd4" path="res://01 Final Draft/Audio/Note Hits/WaterColor/Harp Miss.wav" id="56_m5pun"]
+[ext_resource type="AudioStream" uid="uid://biliqhxkkneeg" path="res://01 Final Draft/Audio/Note Hits/WaterColor/Harp Ok.wav" id="57_tfiig"]
+[ext_resource type="AudioStream" uid="uid://bw3vjnach3x1h" path="res://01 Final Draft/Audio/Note Hits/WaterColor/Harp Perf.wav" id="58_330xr"]
+[ext_resource type="AudioStream" uid="uid://d1wi6a33ftbh" path="res://01 Final Draft/Audio/Note Hits/WaterColor/EDM_Miss.wav" id="59_hhvs4"]
+[ext_resource type="AudioStream" uid="uid://n730p30bl7r0" path="res://01 Final Draft/Audio/Note Hits/WaterColor/EDM_OK.wav" id="60_nqyyg"]
+[ext_resource type="AudioStream" uid="uid://coea3q3o8knqk" path="res://01 Final Draft/Audio/Note Hits/WaterColor/EDM_Perfect.wav" id="61_np24n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l7rsm"]
 size = Vector2(96, 96)
@@ -302,6 +308,24 @@ sprite_frames = SubResource("SpriteFrames_xndp3")
 animation = &"realism_emeny_neutral"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
+
+[node name="Harp Miss" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("56_m5pun")
+
+[node name="Harp Good" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("57_tfiig")
+
+[node name="Harp Perfect" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("58_330xr")
+
+[node name="EDM Miss" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("59_hhvs4")
+
+[node name="EDM Good" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("60_nqyyg")
+
+[node name="EDM Perfect" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("61_np24n")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
