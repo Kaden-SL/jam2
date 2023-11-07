@@ -4,12 +4,12 @@ extends Node2D
 
 func _ready():
  tutorial_intro.play("Fade In")
- get_tree().create_timer(12).timeout.connect(fade_out)
+ get_tree().create_timer(22).timeout.connect(fade_out)
  
 
 func fade_out():
  tutorial_intro.play("Fade Out")
- get_tree().create_timer(3).timeout.connect(start_game)
+ get_tree().create_timer(4).timeout.connect(start_game)
  
 
 func start_game():
