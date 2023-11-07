@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://bbfcscv6aabyq"]
+[gd_scene load_steps=5 format=3 uid="uid://bbfcscv6aabyq"]
 
 [ext_resource type="Script" path="res://01 Final Draft/Scenes/GameOverScreen.gd" id="1_sju3u"]
 [ext_resource type="Texture2D" uid="uid://bypcfn73dt4p7" path="res://01 Final Draft/Art Assets/VerseWalkerCoverImageUpdated.png" id="2_khlj7"]
@@ -6,9 +6,6 @@
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_macs6"]
 bg_color = Color(0.286275, 0.286275, 0.286275, 0)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qf43o"]
-bg_color = Color(0.172549, 0.172549, 0.172549, 1)
 
 [node name="GameOverScreen" type="CanvasLayer"]
 script = ExtResource("1_sju3u")
@@ -44,25 +41,10 @@ layout_mode = 2
 layout_mode = 2
 theme_override_constants/separation = 60
 
-[node name="GameOver" type="Label" parent="Panel/MarginContainer/CenterContainer/Rows"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("3_7e5fl")
-theme_override_font_sizes/font_size = 100
-theme_override_styles/normal = SubResource("StyleBoxFlat_qf43o")
-text = "Start"
-horizontal_alignment = 1
-
 [node name="Button" type="Button" parent="Panel/MarginContainer/CenterContainer/Rows"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_7e5fl")
 theme_override_font_sizes/font_size = 70
-text = "Restart"
-
-[node name="Button2" type="Button" parent="Panel/MarginContainer/CenterContainer/Rows"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("3_7e5fl")
-theme_override_font_sizes/font_size = 70
-text = "Quit"
+text = "Start Game"
 
 [connection signal="pressed" from="Panel/MarginContainer/CenterContainer/Rows/Button" to="." method="_on_button_pressed" flags=18]
-[connection signal="pressed" from="Panel/MarginContainer/CenterContainer/Rows/Button2" to="." method="_on_button_2_pressed" flags=18]
