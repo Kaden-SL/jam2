@@ -62,29 +62,3 @@ func goP():
 	$WaterColor.visible = false
 	$Punk.visible = false
 	$EDM.visible = true
-	
-"""
-func _on_timer_timeout():
-	#$Sprite2D.visible = false
-	#$Sprite2D2.visible = true
-	if $Sprite2D.visible == true:
-		$Sprite2D.visible = false
-		$Sprite2D2.visible = true
-		#goG()
-		$Timer.start()
-	if $Sprite2D2.visible == true:
-		$Sprite2D2.visible = false
-		$Sprite2D3.visible = true
-		#goB()
-		$Timer.start()
-	if $Sprite2D3.visible == true:
-		$Sprite2D3.visible = false
-		$Sprite2D4.visible = true
-		#goP()
-		$Timer.start()
-	if $Sprite2D4.visible == true:
-		$Sprite2D4.visible = false
-		$Sprite2D.visible = true
-		#goR()
-		$Timer.start()
-"""
