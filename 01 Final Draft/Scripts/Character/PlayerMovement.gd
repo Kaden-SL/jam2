@@ -7,10 +7,12 @@ var max_distance_to_center = 500
 #var playerOrigin_x
 #var playerOrigin_y
 var current_universe = Global.current_universe
+var sprite
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	playerOrigin = self.position
+	sprite = $"Player Animations"
 	#playerOrigin_x = self.position.x
 	#playerOrigin_y = self.position.y
 	
@@ -38,8 +40,10 @@ func _physics_process(delta):
 		velocity.y -= 1
 	if Input.is_action_just_pressed("left"):
 		velocity.x -= 1
+		sprite.set_flip_h(false) 
 	if Input.is_action_just_pressed("right"):
 		velocity.x += 1
+		sprite.set_flip_h(true)
 	if velocity.length() > 0:
 		velocity = velocity.normalized() * speed * delta
 	

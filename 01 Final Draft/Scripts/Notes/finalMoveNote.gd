@@ -16,10 +16,10 @@ func _process(delta):
 	
 	# Syncs the note sprite with the universe background
 	if Global.note_universe == "R":
-		$Sprite2D/AnimatedSprite2D.animation = "1 R"
+		$Sprite2D/AnimatedSprite2D.play("realism_emeny_neutral")
 		_switch_groups("R","P")
 	if Global.note_universe == "B":
-		$Sprite2D/AnimatedSprite2D.animation = "3 B"
+		$Sprite2D/AnimatedSprite2D.play("wc_enemy_attack")
 		_switch_groups("B","R")
 	if Global.note_universe == "G":
 		$Sprite2D/AnimatedSprite2D.animation = "2 G"

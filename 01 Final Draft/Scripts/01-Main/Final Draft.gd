@@ -63,6 +63,9 @@ func _process(delta):
 		_SwitchAudioPlayer($MusicPlayerMelodic,$MusicPlayerEDM,$MusicPlayerRock,$TheMusicPlayer)
 	if Global.current_universe == "P":
 		_SwitchAudioPlayer($MusicPlayerEDM,$MusicPlayerMelodic,$MusicPlayerRock,$TheMusicPlayer)
+	
+	get_node("/root/Final Draft/PlayerHealthBar").set_value(Global.missedNotes)
+	get_node("/root/Final Draft/BossHealthBar").set_value(Global.bossHealth)
 
 func _CheckHalfTime(AudioPlayer):
 	if AudioPlayer.get_playback_position() >= halfwayThroughSong:

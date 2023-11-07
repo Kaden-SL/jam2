@@ -300,7 +300,6 @@ scale = Vector2(0.13, 0.13)
 scale = Vector2(1.03339, 0.966636)
 sprite_frames = SubResource("SpriteFrames_xndp3")
 animation = &"realism_emeny_neutral"
-frame_progress = 0.862356
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
 
