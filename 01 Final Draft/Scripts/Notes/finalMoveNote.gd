@@ -22,10 +22,10 @@ func _process(delta):
 		$Sprite2D/AnimatedSprite2D.play("wc_enemy_attack")
 		_switch_groups("B","R")
 	if Global.note_universe == "G":
-		$Sprite2D/AnimatedSprite2D.animation = "2 G"
+		$Sprite2D/AnimatedSprite2D.animation = "Punk_attack"
 		_switch_groups("G","B")
 	if Global.note_universe == "P":
-		$Sprite2D/AnimatedSprite2D.animation = "4 P"
+		$Sprite2D/AnimatedSprite2D.animation = "EDM_attack"
 		_switch_groups("P","G")
 		
 func _on_body_entered(body):
@@ -36,9 +36,18 @@ func _on_body_entered(body):
 				queue_free()
 				if self.is_in_group("Perfect"):
 					Global.bossHealth -= 2
+					
 				else:
 					Global.bossHealth -= 1
 				print("PlayerHit")
+				#if Global.note_universe == "R":
+					#$Sprite2D/AnimatedSprite2D.play("realism_enemy_death ")
+				#if Global.note_universe == "B":
+					#$Sprite2D/AnimatedSprite2D.play("wc_enemy_death")
+				#if Global.note_universe == "G":
+					#$Sprite2D/AnimatedSprite2D.animation = "Punk_death"
+				#if Global.note_universe == "P":
+					#$Sprite2D/AnimatedSprite2D.animation = "EDM_death"
 				
 				if Global.bossHealth == 0:
 					print("boss dead")

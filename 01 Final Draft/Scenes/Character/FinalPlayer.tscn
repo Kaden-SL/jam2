@@ -350,4 +350,4 @@ shape = SubResource("RectangleShape2D_mdjjc")
 [node name="Player Animations" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_61lat")
-animation = &"Realism_Character"
+animation = &"WC_Character_Attack"

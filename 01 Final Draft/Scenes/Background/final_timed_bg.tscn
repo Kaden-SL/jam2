@@ -1,10 +1,14 @@
-[gd_scene load_steps=7 format=3 uid="uid://c2yoso5vxf45g"]
+[gd_scene load_steps=11 format=3 uid="uid://c2yoso5vxf45g"]
 
 [ext_resource type="Script" path="res://01 Final Draft/Scripts/Background/FinalTimedBG.gd" id="1_enygb"]
 [ext_resource type="Texture2D" uid="uid://dos22nh8qs08r" path="res://01 Final Draft/Art Assets/Background/background.realism.png" id="2_ejbt5"]
 [ext_resource type="Texture2D" uid="uid://b4o52fdpfp7pv" path="res://01 Final Draft/Art Assets/Background/versewalker_wc_bg.png" id="3_gs0wh"]
+[ext_resource type="Texture2D" uid="uid://644gtr0ac3o" path="res://01 Final Draft/Art Assets/Boss/boss.realism (1).png" id="3_ip2r7"]
 [ext_resource type="Texture2D" uid="uid://cpyhlnb1gxswx" path="res://01 Final Draft/Art Assets/Background/Punk_Background.png" id="4_7ufsl"]
 [ext_resource type="Texture2D" uid="uid://ddp64qlweo4rb" path="res://01 Final Draft/Art Assets/Background/EDM Background.png" id="5_8h6p1"]
+[ext_resource type="Texture2D" uid="uid://c0frvt4bh63th" path="res://01 Final Draft/Art Assets/Boss/versewalker_wc_boss1.png" id="7_go1s4"]
+[ext_resource type="Texture2D" uid="uid://dode0pfowplih" path="res://01 Final Draft/Art Assets/Boss/Punk_Boss.png" id="8_msosy"]
+[ext_resource type="Texture2D" uid="uid://0i57fw25u2t4" path="res://01 Final Draft/Art Assets/Boss/EDM Boss.png" id="9_qjc4n"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_k74gk"]
 
@@ -16,13 +20,33 @@ script = ExtResource("1_enygb")
 [node name="Realism" type="Sprite2D" parent="."]
 texture = ExtResource("2_ejbt5")
 
+[node name="Boss_realism(1)" type="Sprite2D" parent="Realism"]
+position = Vector2(747, 450)
+scale = Vector2(0.546333, 0.546333)
+texture = ExtResource("3_ip2r7")
+
 [node name="WaterColor" type="Sprite2D" parent="."]
 texture = ExtResource("3_gs0wh")
+
+[node name="VersewalkerWcBoss1" type="Sprite2D" parent="WaterColor"]
+position = Vector2(-670, 576)
+scale = Vector2(0.579333, 0.579333)
+texture = ExtResource("7_go1s4")
 
 [node name="Punk" type="Sprite2D" parent="."]
 texture = ExtResource("4_7ufsl")
 
+[node name="PunkBoss" type="Sprite2D" parent="Punk"]
+position = Vector2(-668, 698)
+scale = Vector2(0.460667, 0.460667)
+texture = ExtResource("8_msosy")
+
 [node name="EDM" type="Sprite2D" parent="."]
 texture = ExtResource("5_8h6p1")
+
+[node name="EdmBoss" type="Sprite2D" parent="EDM"]
+position = Vector2(721, 641)
+scale = Vector2(0.453333, 0.453333)
+texture = ExtResource("9_qjc4n")
 
 [node name="Timer" type="Timer" parent="."]
