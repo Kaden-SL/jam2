@@ -51,6 +51,9 @@ func _ready( ):
 	if continuedScene:
 		Global.bossHealth = Global.prevBossHealth
 		Global.missedNotes = Global.prevMissedNotes
+	else:
+		Global.bossHealth = Global.deafultbossHealth
+		Global.missedNotes = Global.defaultmissedNotes
 	OS.open_midi_inputs( )
 	print( OS.get_connected_midi_inputs( ) )
 	for current_midi_input in OS.get_connected_midi_inputs( ):
