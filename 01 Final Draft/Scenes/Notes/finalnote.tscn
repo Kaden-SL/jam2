@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=3 uid="uid://cfxcbqyagrgo4"]
+[gd_scene load_steps=66 format=3 uid="uid://cfxcbqyagrgo4"]
 
 [ext_resource type="Script" path="res://01 Final Draft/Scripts/Notes/finalMoveNote.gd" id="1_1sdu8"]
 [ext_resource type="Texture2D" uid="uid://dyn6ypdpaiukx" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Neutral/enemies.realism-1.png" id="2_717vl"]
@@ -6,18 +6,26 @@
 [ext_resource type="Texture2D" uid="uid://b6rs1c04uv2df" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Neutral/versewalker_wc_enemy_base.png" id="4_l58tb"]
 [ext_resource type="Texture2D" uid="uid://cgvpbpf6dwuse" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Neutral/EDM Neutral.png" id="5_bwdsd"]
 [ext_resource type="Texture2D" uid="uid://iso55lfp420h" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Neutral/enemies.realism-2.png" id="6_igp4d"]
+[ext_resource type="Texture2D" uid="uid://bnpwbxdllb1bt" path="res://01 Final Draft/Art Assets/Notes/Enemies_ attack/EDM Attack 1.png" id="6_jihuh"]
 [ext_resource type="Texture2D" uid="uid://5v2qlq44w031" path="res://01 Final Draft/Art Assets/Notes/Enemies_ attack/versewalker_wc_enemy_attack1.png" id="6_muod1"]
+[ext_resource type="Texture2D" uid="uid://c5q1cq178cr0n" path="res://01 Final Draft/Art Assets/Notes/Enemies_ attack/EDM Attack 2.png" id="7_amqoh"]
 [ext_resource type="Texture2D" uid="uid://dhomnufegxrg8" path="res://01 Final Draft/Art Assets/Notes/Enemies_ attack/versewalker_wc_enemy_attack2.png" id="7_cd744"]
 [ext_resource type="Texture2D" uid="uid://c1hb0ma04rawb" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Neutral/enemies.realism-3.png" id="7_dbicn"]
 [ext_resource type="Texture2D" uid="uid://bdrwtbprr0ee8" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Neutral/enemies.realism-4.png" id="8_br1pv"]
+[ext_resource type="Texture2D" uid="uid://dp7l3a1846ild" path="res://01 Final Draft/Art Assets/Notes/Enemies_ attack/EDM Attack 3.png" id="8_eu3ei"]
 [ext_resource type="Texture2D" uid="uid://cqqyra7our2hu" path="res://01 Final Draft/Art Assets/Notes/Enemies_ attack/versewalker_wc_enemy_attack3.png" id="8_jc5eb"]
 [ext_resource type="Texture2D" uid="uid://p1aq1xiicr33" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Death/versewalker_wc_enemy_death1.png" id="9_fpt26"]
 [ext_resource type="Texture2D" uid="uid://bf7jqf6wfo4ih" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Neutral/enemies.realism-5.png" id="9_hadk8"]
+[ext_resource type="Texture2D" uid="uid://gspyqv5ypec7" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Death/EDM Death 1.png" id="9_t32vx"]
+[ext_resource type="Texture2D" uid="uid://ba7wvs8vvsrpc" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Death/EDM Death 2.png" id="10_2sweg"]
 [ext_resource type="Texture2D" uid="uid://72x42vvecksh" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Neutral/enemies.realism-6.png" id="10_hogcm"]
 [ext_resource type="Texture2D" uid="uid://dus5o050dntxl" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Death/versewalker_wc_enemy_death2.png" id="10_p7gcd"]
+[ext_resource type="Texture2D" uid="uid://dcylif86o6ms4" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Death/EDM Death 3.png" id="11_511s0"]
 [ext_resource type="Texture2D" uid="uid://gnjypcl370g8" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Neutral/enemies.realism-7.png" id="11_gywcg"]
 [ext_resource type="Texture2D" uid="uid://ptb6q1x6gqam" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Death/versewalker_wc_enemy_death3.png" id="11_kee43"]
 [ext_resource type="Texture2D" uid="uid://cc15dc238dasj" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Neutral/enemies.realism-8.png" id="12_c6iwn"]
+[ext_resource type="Texture2D" uid="uid://rlnrujs63cej" path="res://01 Final Draft/Art Assets/Notes/Enemies_ attack/punk_enemy_attack.png" id="12_kjvfp"]
+[ext_resource type="Texture2D" uid="uid://54cv6a4lyc84" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Death/punk_enemy_death.png" id="13_m6f46"]
 [ext_resource type="Texture2D" uid="uid://bc2g6vsfaipbx" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Neutral/enemies.realism-9.png" id="13_okr1y"]
 [ext_resource type="Texture2D" uid="uid://dulhxsyijqrlo" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Neutral/enemies.realism-10.png" id="14_o1uea"]
 [ext_resource type="Texture2D" uid="uid://dxv8glnpsnvrb" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Neutral/enemies.realism-11.png" id="15_ckgq7"]
@@ -91,6 +99,50 @@ animations = [{
 }],
 "loop": true,
 "name": &"4 P",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_jihuh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_amqoh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_eu3ei")
+}],
+"loop": true,
+"name": &"EDM_attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_t32vx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_2sweg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_511s0")
+}],
+"loop": true,
+"name": &"EDM_death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_kjvfp")
+}],
+"loop": true,
+"name": &"Punk_attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_m6f46")
+}],
+"loop": true,
+"name": &"Punk_death",
 "speed": 5.0
 }, {
 "frames": [{
@@ -299,7 +351,7 @@ scale = Vector2(0.13, 0.13)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sprite2D"]
 scale = Vector2(1.03339, 0.966636)
 sprite_frames = SubResource("SpriteFrames_xndp3")
-animation = &"realism_emeny_neutral"
+animation = &"wc_enemy_death"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
 

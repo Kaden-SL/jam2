@@ -1,10 +1,14 @@
-[gd_scene load_steps=9 format=3 uid="uid://0dumlb557eqt"]
+[gd_scene load_steps=13 format=3 uid="uid://0dumlb557eqt"]
 
 [ext_resource type="Script" path="res://01 Final Draft/Scripts/Pocket Dimension/Pocket Dimension.gd" id="1_d5n3y"]
 [ext_resource type="Texture2D" uid="uid://bspxh58e2g5fc" path="res://01 Final Draft/Art Assets/Pocket Dimension/realism.pocketdim.png" id="2_db3ps"]
 [ext_resource type="Texture2D" uid="uid://dfcwdpkjhe54h" path="res://01 Final Draft/Art Assets/Pocket Dimension/wc_pocketdim.png" id="3_767lh"]
+[ext_resource type="Texture2D" uid="uid://bj2j2051q0ql1" path="res://01 Final Draft/Art Assets/Pocket Dimension Frame/realism.border.png" id="3_ngyd7"]
 [ext_resource type="Texture2D" uid="uid://btfs5m28ynjpk" path="res://01 Final Draft/Art Assets/Pocket Dimension/Punk_Personal_Dimension.png" id="4_xklqg"]
+[ext_resource type="Texture2D" uid="uid://dheypy2unh8ng" path="res://01 Final Draft/Art Assets/Pocket Dimension Frame/wc_Border.png" id="5_f6qkc"]
 [ext_resource type="Texture2D" uid="uid://uu7hfyojkk7f" path="res://01 Final Draft/Art Assets/Pocket Dimension/EDM Square.png" id="5_pl5ft"]
+[ext_resource type="Texture2D" uid="uid://bqcvw7ryqoq5d" path="res://01 Final Draft/Art Assets/Pocket Dimension Frame/Punk_Border.png" id="7_epjq6"]
+[ext_resource type="Texture2D" uid="uid://duvrss6o0qon3" path="res://01 Final Draft/Art Assets/Pocket Dimension Frame/EDM Border.png" id="9_koeet"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ek8b5"]
 load_path = "res://.godot/imported/Untitled_ArtworkTempBG.png-bad1aa13f634bea13793ed2ab83ed515.ctex"
@@ -21,14 +25,27 @@ script = ExtResource("1_d5n3y")
 [node name="Realism" type="Sprite2D" parent="."]
 texture = ExtResource("2_db3ps")
 
+[node name="Realism_border" type="Sprite2D" parent="Realism"]
+scale = Vector2(1.12222, 1.11667)
+texture = ExtResource("3_ngyd7")
+
 [node name="WaterColor" type="Sprite2D" parent="."]
 texture = ExtResource("3_767lh")
+
+[node name="WcBorder" type="Sprite2D" parent="WaterColor"]
+texture = ExtResource("5_f6qkc")
 
 [node name="Punk" type="Sprite2D" parent="."]
 texture = ExtResource("4_xklqg")
 
+[node name="PunkBorder" type="Sprite2D" parent="Punk"]
+texture = ExtResource("7_epjq6")
+
 [node name="EDM" type="Sprite2D" parent="."]
 texture = ExtResource("5_pl5ft")
+
+[node name="EdmBorder" type="Sprite2D" parent="EDM"]
+texture = ExtResource("9_koeet")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 visible = false

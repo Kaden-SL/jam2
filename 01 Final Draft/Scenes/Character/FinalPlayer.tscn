@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dj2ashexuuylb"]
+[gd_scene load_steps=73 format=3 uid="uid://dj2ashexuuylb"]
 
 [ext_resource type="Script" path="res://01 Final Draft/Scripts/Character/PlayerMovement.gd" id="1_44ee6"]
 [ext_resource type="Texture2D" uid="uid://qa85dvx3ol7l" path="res://01 Final Draft/Art Assets/Character/character.realism (2).png" id="2_aa3ii"]
@@ -6,7 +6,70 @@
 [ext_resource type="Texture2D" uid="uid://c6mhhrp51fwya" path="res://01 Final Draft/Art Assets/Character/versewalker_wc_char1.png" id="4_6pptb"]
 [ext_resource type="Texture2D" uid="uid://cm43wldotnslh" path="res://01 Final Draft/Art Assets/Character/EDM Character 1.png" id="5_tcciu"]
 [ext_resource type="Texture2D" uid="uid://e1dalapn1gfg" path="res://01 Final Draft/Art Assets/Character/character.realism 1.png" id="6_1auov"]
+[ext_resource type="Texture2D" uid="uid://db4o38p5bxcte" path="res://01 Final Draft/Art Assets/Character/EDM Character 2.png" id="6_y6qst"]
 [ext_resource type="Texture2D" uid="uid://b041ydcd7c350" path="res://01 Final Draft/Art Assets/Character/character.realism (1).png" id="7_4w33n"]
+[ext_resource type="Texture2D" uid="uid://v55d3r8xlw47" path="res://01 Final Draft/Art Assets/Character/EDM Character 3.png" id="7_mf37d"]
+[ext_resource type="Texture2D" uid="uid://dp6vl1plhmqre" path="res://01 Final Draft/Art Assets/Character/Punk_Attack/Full Body00.png" id="8_wxge0"]
+[ext_resource type="Texture2D" uid="uid://c8r6xjd6f13ps" path="res://01 Final Draft/Art Assets/Character/Punk_Attack/Full Body01.png" id="9_7xbib"]
+[ext_resource type="Texture2D" uid="uid://dtl5kyp7ftl10" path="res://01 Final Draft/Art Assets/Character/Punk_Attack/Full Body02.png" id="10_3l0q3"]
+[ext_resource type="Texture2D" uid="uid://c4siulaw1boml" path="res://01 Final Draft/Art Assets/Character/Punk_Attack/Full Body03.png" id="11_mmxn4"]
+[ext_resource type="Texture2D" uid="uid://bwsoh282tlte8" path="res://01 Final Draft/Art Assets/Character/Punk_Attack/Full Body04.png" id="12_oakoj"]
+[ext_resource type="Texture2D" uid="uid://bbmhmotsy0wfy" path="res://01 Final Draft/Art Assets/Character/Punk_Attack/Full Body05.png" id="13_553o3"]
+[ext_resource type="Texture2D" uid="uid://b4ogw7gkclr6u" path="res://01 Final Draft/Art Assets/Character/Punk_Attack/Full Body06.png" id="14_von2n"]
+[ext_resource type="Texture2D" uid="uid://c8ps5ph57hgjc" path="res://01 Final Draft/Art Assets/Character/Punk_Attack/Full Body07.png" id="15_wssmg"]
+[ext_resource type="Texture2D" uid="uid://dj0k5covxyvmi" path="res://01 Final Draft/Art Assets/Character/Punk_Attack/Full Body08.png" id="16_c6csq"]
+[ext_resource type="Texture2D" uid="uid://djw0wt6u874x" path="res://01 Final Draft/Art Assets/Character/Punk_Attack/Full Body09.png" id="17_w84jo"]
+[ext_resource type="Texture2D" uid="uid://cemclo8dpexhk" path="res://01 Final Draft/Art Assets/Character/Punk_Attack/Full Body10.png" id="18_uyylr"]
+[ext_resource type="Texture2D" uid="uid://cc5vv6cgxsvfy" path="res://01 Final Draft/Art Assets/Character/Punk_Attack/Full Body11.png" id="19_na0dp"]
+[ext_resource type="Texture2D" uid="uid://bqdsph2mwswsn" path="res://01 Final Draft/Art Assets/Character/Punk_Attack/Full Body12.png" id="20_0kwqv"]
+[ext_resource type="Texture2D" uid="uid://c034hy5f1bldu" path="res://01 Final Draft/Art Assets/Character/Punk_Attack/Full Body13.png" id="21_xkkdd"]
+[ext_resource type="Texture2D" uid="uid://o505744i3mrt" path="res://01 Final Draft/Art Assets/Character/Punk_Attack/Full Body14.png" id="22_66dtf"]
+[ext_resource type="Texture2D" uid="uid://btrh62nfvpfik" path="res://01 Final Draft/Art Assets/Character/Punk_Attack/Full Body15.png" id="23_0nvlm"]
+[ext_resource type="Texture2D" uid="uid://ctceb8nchwxer" path="res://01 Final Draft/Art Assets/Character/Punk_Attack/Full Body16.png" id="24_nmwdy"]
+[ext_resource type="Texture2D" uid="uid://csvooigot1vyw" path="res://01 Final Draft/Art Assets/Character/Punk_Attack/Full Body17.png" id="25_5qu80"]
+[ext_resource type="Texture2D" uid="uid://xfi8iqayisgx" path="res://01 Final Draft/Art Assets/Character/Punk_Attack/Full Body18.png" id="26_qcw33"]
+[ext_resource type="Texture2D" uid="uid://b4dagi4qyye6b" path="res://01 Final Draft/Art Assets/Character/Punk_Attack/Full Body19.png" id="27_bqogo"]
+[ext_resource type="Texture2D" uid="uid://74oig7it57jc" path="res://01 Final Draft/Art Assets/Character/Punk_Attack/Full Body20.png" id="28_jppx7"]
+[ext_resource type="Texture2D" uid="uid://b4alev317ln22" path="res://01 Final Draft/Art Assets/Character/Punk_Attack/Full Body21.png" id="29_a6qc1"]
+[ext_resource type="Texture2D" uid="uid://otyaf0ugl8oa" path="res://01 Final Draft/Art Assets/Character/Punk_Attack/Full Body22.png" id="30_6e2xf"]
+[ext_resource type="Texture2D" uid="uid://bkosey6qovmnp" path="res://01 Final Draft/Art Assets/Character/Punk_Attack/Full Body23.png" id="31_fgf8o"]
+[ext_resource type="Texture2D" uid="uid://d0hs6v30c66yr" path="res://01 Final Draft/Art Assets/Character/Punk_Attack/Full Body24.png" id="32_48wq2"]
+[ext_resource type="Texture2D" uid="uid://b3ebdit2ulibt" path="res://01 Final Draft/Art Assets/Character/Punk_Attack/Full Body25.png" id="33_i6q4u"]
+[ext_resource type="Texture2D" uid="uid://dfkp7yv3u1woh" path="res://01 Final Draft/Art Assets/Character/Punk_Attack/Full Body26.png" id="34_ts0s6"]
+[ext_resource type="Texture2D" uid="uid://dbki3vem80nts" path="res://01 Final Draft/Art Assets/Character/Punk_Attack/Full Body27.png" id="35_0ayq6"]
+[ext_resource type="Texture2D" uid="uid://c4vn2nt1dw7ci" path="res://01 Final Draft/Art Assets/Character/Punk_Attack/Full Body28.png" id="36_nsrq7"]
+[ext_resource type="Texture2D" uid="uid://t5apxmr6gv5e" path="res://01 Final Draft/Art Assets/Character/Punk_Attack/Full Body29.png" id="37_cx1aq"]
+[ext_resource type="Texture2D" uid="uid://covgoao5ypui1" path="res://01 Final Draft/Art Assets/Character/Punk_Idle/Full Body00.png" id="38_allta"]
+[ext_resource type="Texture2D" uid="uid://crnvl7fdpphyc" path="res://01 Final Draft/Art Assets/Character/Punk_Idle/Full Body01.png" id="39_28q3f"]
+[ext_resource type="Texture2D" uid="uid://vkxoduasj6f2" path="res://01 Final Draft/Art Assets/Character/Punk_Idle/Full Body02.png" id="40_7o3ri"]
+[ext_resource type="Texture2D" uid="uid://ddbc71ke8qxnq" path="res://01 Final Draft/Art Assets/Character/Punk_Idle/Full Body03.png" id="41_ufvl6"]
+[ext_resource type="Texture2D" uid="uid://b4hb5ajiufpj7" path="res://01 Final Draft/Art Assets/Character/Punk_Idle/Full Body04.png" id="42_0bspl"]
+[ext_resource type="Texture2D" uid="uid://bywnnffidqud2" path="res://01 Final Draft/Art Assets/Character/Punk_Idle/Full Body05.png" id="43_tf4vp"]
+[ext_resource type="Texture2D" uid="uid://dg32xk1ktb3b0" path="res://01 Final Draft/Art Assets/Character/Punk_Idle/Full Body06.png" id="44_ump8x"]
+[ext_resource type="Texture2D" uid="uid://urfd65obhadn" path="res://01 Final Draft/Art Assets/Character/Punk_Idle/Full Body07.png" id="45_4gggx"]
+[ext_resource type="Texture2D" uid="uid://duki1ope5rlua" path="res://01 Final Draft/Art Assets/Character/Punk_Idle/Full Body08.png" id="46_wx77n"]
+[ext_resource type="Texture2D" uid="uid://n8bdggsio66t" path="res://01 Final Draft/Art Assets/Character/Punk_Idle/Full Body09.png" id="47_g2awm"]
+[ext_resource type="Texture2D" uid="uid://cntnioygj4sqh" path="res://01 Final Draft/Art Assets/Character/Punk_Idle/Full Body10.png" id="48_secqq"]
+[ext_resource type="Texture2D" uid="uid://c8ott5thpsuir" path="res://01 Final Draft/Art Assets/Character/Punk_Idle/Full Body11.png" id="49_fk0kq"]
+[ext_resource type="Texture2D" uid="uid://dqqtuofx6uql4" path="res://01 Final Draft/Art Assets/Character/Punk_Idle/Full Body12.png" id="50_0ymlf"]
+[ext_resource type="Texture2D" uid="uid://tlu5xo82ximm" path="res://01 Final Draft/Art Assets/Character/Punk_Idle/Full Body13.png" id="51_jgypj"]
+[ext_resource type="Texture2D" uid="uid://deef27cnlrfwg" path="res://01 Final Draft/Art Assets/Character/Punk_Idle/Full Body14.png" id="52_trr7c"]
+[ext_resource type="Texture2D" uid="uid://dwohyh8t8cvos" path="res://01 Final Draft/Art Assets/Character/Punk_Idle/Full Body15.png" id="53_pq8yd"]
+[ext_resource type="Texture2D" uid="uid://bb5x3ti612oiq" path="res://01 Final Draft/Art Assets/Character/Punk_Idle/Full Body16.png" id="54_4odtp"]
+[ext_resource type="Texture2D" uid="uid://cwaauku6iuij4" path="res://01 Final Draft/Art Assets/Character/Punk_Idle/Full Body17.png" id="55_l8nbd"]
+[ext_resource type="Texture2D" uid="uid://b266grfvbj828" path="res://01 Final Draft/Art Assets/Character/Punk_Idle/Full Body18.png" id="56_rgdx2"]
+[ext_resource type="Texture2D" uid="uid://bsadp38x37gul" path="res://01 Final Draft/Art Assets/Character/Punk_Idle/Full Body19.png" id="57_cq7p6"]
+[ext_resource type="Texture2D" uid="uid://d1w6c6qnan8d0" path="res://01 Final Draft/Art Assets/Character/Punk_Idle/Full Body20.png" id="58_pakfx"]
+[ext_resource type="Texture2D" uid="uid://time7dsvtxt" path="res://01 Final Draft/Art Assets/Character/Punk_Idle/Full Body21.png" id="59_dceh6"]
+[ext_resource type="Texture2D" uid="uid://bpf0renyv8n88" path="res://01 Final Draft/Art Assets/Character/Punk_Idle/Full Body22.png" id="60_gerho"]
+[ext_resource type="Texture2D" uid="uid://c20qjm40o2prh" path="res://01 Final Draft/Art Assets/Character/Punk_Idle/Full Body23.png" id="61_s1isf"]
+[ext_resource type="Texture2D" uid="uid://dwdardbhqjqvc" path="res://01 Final Draft/Art Assets/Character/Punk_Idle/Full Body24.png" id="62_gosfr"]
+[ext_resource type="Texture2D" uid="uid://d0mmrjrya7jad" path="res://01 Final Draft/Art Assets/Character/Punk_Idle/Full Body25.png" id="63_8qre0"]
+[ext_resource type="Texture2D" uid="uid://w6ujapb2xmvj" path="res://01 Final Draft/Art Assets/Character/Punk_Idle/Full Body26.png" id="64_a5xen"]
+[ext_resource type="Texture2D" uid="uid://dvpobn73gaq05" path="res://01 Final Draft/Art Assets/Character/Punk_Idle/Full Body27.png" id="65_8y855"]
+[ext_resource type="Texture2D" uid="uid://jqw25p235bol" path="res://01 Final Draft/Art Assets/Character/Punk_Idle/Full Body28.png" id="66_knh46"]
+[ext_resource type="Texture2D" uid="uid://cwpbmxl35u6ip" path="res://01 Final Draft/Art Assets/Character/Punk_Idle/Full Body29.png" id="67_c7kox"]
+[ext_resource type="Texture2D" uid="uid://5fa0ywwwcgtw" path="res://01 Final Draft/Art Assets/Character/versewalker_wc_char2.png" id="70_vckc3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mdjjc"]
 size = Vector2(130.109, 255)
@@ -47,6 +110,210 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("5_tcciu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_y6qst")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_mf37d")
+}],
+"loop": true,
+"name": &"EDM_Character",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_wxge0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_7xbib")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_3l0q3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_mmxn4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_oakoj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_553o3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_von2n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_wssmg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_c6csq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_w84jo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_uyylr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_na0dp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_0kwqv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_xkkdd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_66dtf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_0nvlm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_nmwdy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_5qu80")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_qcw33")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_bqogo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_jppx7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_a6qc1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_6e2xf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_fgf8o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_48wq2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_i6q4u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_ts0s6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_0ayq6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_nsrq7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_cx1aq")
+}],
+"loop": true,
+"name": &"Punk_Character_Attack",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("38_allta")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_28q3f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_7o3ri")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_ufvl6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_0bspl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_tf4vp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_ump8x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_4gggx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_wx77n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_g2awm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_secqq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_fk0kq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_0ymlf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_jgypj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_trr7c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_pq8yd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_4odtp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_l8nbd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_rgdx2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_cq7p6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_pakfx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_dceh6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_gerho")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_s1isf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_gosfr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_8qre0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_a5xen")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_8y855")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_knh46")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_c7kox")
+}],
+"loop": true,
+"name": &"Punk_Character_Idle",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("2_aa3ii")
 }, {
 "duration": 1.0,
@@ -58,6 +325,17 @@ animations = [{
 "loop": true,
 "name": &"Realism_Character",
 "speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_6pptb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_vckc3")
+}],
+"loop": true,
+"name": &"WC_Character_Attack",
+"speed": 5.0
 }]
 
 [node name="Final Player" type="CharacterBody2D" groups=["Player"]]
@@ -72,4 +350,4 @@ shape = SubResource("RectangleShape2D_mdjjc")
 [node name="Player Animations" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_61lat")
-animation = &"Realism_Character"
+animation = &"EDM_Character"
