@@ -11,6 +11,7 @@ var sprite
 var isMoving = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	_setAnim("R")
 	playerOrigin = self.position
 	sprite = $"Player Animations"
 	#playerOrigin_x = self.position.x

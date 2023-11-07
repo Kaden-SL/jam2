@@ -49,10 +49,12 @@ func _on_body_entered(body):
 				#if Global.note_universe == "P":
 					#$Sprite2D/AnimatedSprite2D.animation = "EDM_death"
 				
-				if Global.bossHealth == 0:
+				if Global.bossHealth <= 0:
 					print("boss dead")
-					Global.bossHealth += 100
-					get_tree().change_scene_to_file("res://01 Final Draft/Scenes/game_over_screen.tscn")
+					Global.bossHealth = 100
+					Global.currentLevel += 1
+					# get_tree().change_scene_to_file("res://01 Final Draft/Scenes/game_over_screen.tscn")
+					get_tree().change_scene_to_file("res://01 Final Draft/Scenes/01-Main/Final Draft"+str(Global.currentLevel)+".tscn")
 	
 	#if body.is_in_group("DeathBox"):
 		#print("DeathBoxHit")
@@ -82,8 +84,10 @@ func _on_area_entered(area):
 		self.add_to_group("Miss")
 		print("Note was missed")
 		Global.missedNotes -= 1
-		if Global.missedNotes == 0:
+		if Global.missedNotes <= 0:
 			print("dead")
 			Global.missedNotes = 50
+			Global.prevMissedNotes = Global.defaultmissedNotes
+			Global.prevBossHealth = Global.deafultbossHealth
 			get_tree().change_scene_to_file("res://01 Final Draft/Scenes/game_over_screen.tscn")
 		queue_free()
