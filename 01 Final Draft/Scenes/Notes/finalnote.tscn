@@ -1,66 +1,60 @@
-[gd_scene load_steps=64 format=3 uid="uid://cfxcbqyagrgo4"]
+[gd_scene load_steps=58 format=3 uid="uid://cfxcbqyagrgo4"]
 
 [ext_resource type="Script" path="res://01 Final Draft/Scripts/Notes/finalMoveNote.gd" id="1_1sdu8"]
-[ext_resource type="Texture2D" uid="uid://dyn6ypdpaiukx" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Neutral/enemies.realism-1.png" id="2_717vl"]
+[ext_resource type="Texture2D" uid="uid://dyn6ypdpaiukx" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Neutral/realisim_enemies_neutral/enemies.realism-1.png" id="2_jlxli"]
 [ext_resource type="Texture2D" uid="uid://ct4omj31h3qjr" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Neutral/punk_enemy_normal.png" id="3_4hj18"]
 [ext_resource type="Texture2D" uid="uid://b6rs1c04uv2df" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Neutral/versewalker_wc_enemy_base.png" id="4_l58tb"]
 [ext_resource type="Texture2D" uid="uid://cgvpbpf6dwuse" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Neutral/EDM Neutral.png" id="5_bwdsd"]
-[ext_resource type="Texture2D" uid="uid://iso55lfp420h" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Neutral/enemies.realism-2.png" id="6_igp4d"]
+[ext_resource type="Texture2D" uid="uid://iso55lfp420h" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Neutral/realisim_enemies_neutral/enemies.realism-2.png" id="6_2s4cr"]
 [ext_resource type="Texture2D" uid="uid://5v2qlq44w031" path="res://01 Final Draft/Art Assets/Notes/Enemies_ attack/versewalker_wc_enemy_attack1.png" id="6_muod1"]
+[ext_resource type="Texture2D" uid="uid://c1hb0ma04rawb" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Neutral/realisim_enemies_neutral/enemies.realism-3.png" id="7_47apf"]
 [ext_resource type="Texture2D" uid="uid://dhomnufegxrg8" path="res://01 Final Draft/Art Assets/Notes/Enemies_ attack/versewalker_wc_enemy_attack2.png" id="7_cd744"]
-[ext_resource type="Texture2D" uid="uid://c1hb0ma04rawb" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Neutral/enemies.realism-3.png" id="7_dbicn"]
-[ext_resource type="Texture2D" uid="uid://bdrwtbprr0ee8" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Neutral/enemies.realism-4.png" id="8_br1pv"]
+[ext_resource type="Texture2D" uid="uid://bdrwtbprr0ee8" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Neutral/realisim_enemies_neutral/enemies.realism-4.png" id="8_8ubou"]
 [ext_resource type="Texture2D" uid="uid://cqqyra7our2hu" path="res://01 Final Draft/Art Assets/Notes/Enemies_ attack/versewalker_wc_enemy_attack3.png" id="8_jc5eb"]
+[ext_resource type="Texture2D" uid="uid://bf7jqf6wfo4ih" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Neutral/realisim_enemies_neutral/enemies.realism-5.png" id="9_3uyo0"]
 [ext_resource type="Texture2D" uid="uid://p1aq1xiicr33" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Death/versewalker_wc_enemy_death1.png" id="9_fpt26"]
-[ext_resource type="Texture2D" uid="uid://bf7jqf6wfo4ih" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Neutral/enemies.realism-5.png" id="9_hadk8"]
-[ext_resource type="Texture2D" uid="uid://72x42vvecksh" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Neutral/enemies.realism-6.png" id="10_hogcm"]
 [ext_resource type="Texture2D" uid="uid://dus5o050dntxl" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Death/versewalker_wc_enemy_death2.png" id="10_p7gcd"]
-[ext_resource type="Texture2D" uid="uid://gnjypcl370g8" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Neutral/enemies.realism-7.png" id="11_gywcg"]
+[ext_resource type="Texture2D" uid="uid://72x42vvecksh" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Neutral/realisim_enemies_neutral/enemies.realism-6.png" id="10_tsd72"]
+[ext_resource type="Texture2D" uid="uid://gnjypcl370g8" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Neutral/realisim_enemies_neutral/enemies.realism-7.png" id="11_hqs7j"]
 [ext_resource type="Texture2D" uid="uid://ptb6q1x6gqam" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Death/versewalker_wc_enemy_death3.png" id="11_kee43"]
-[ext_resource type="Texture2D" uid="uid://cc15dc238dasj" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Neutral/enemies.realism-8.png" id="12_c6iwn"]
-[ext_resource type="Texture2D" uid="uid://bc2g6vsfaipbx" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Neutral/enemies.realism-9.png" id="13_okr1y"]
-[ext_resource type="Texture2D" uid="uid://dulhxsyijqrlo" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Neutral/enemies.realism-10.png" id="14_o1uea"]
-[ext_resource type="Texture2D" uid="uid://dxv8glnpsnvrb" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Neutral/enemies.realism-11.png" id="15_ckgq7"]
-[ext_resource type="Texture2D" uid="uid://bdhmv3p4oyxqi" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Neutral/enemies.realism-12.png" id="16_kb038"]
-[ext_resource type="Texture2D" uid="uid://hsy38pd8qi88" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Neutral/enemies.realism-13.png" id="17_yhggq"]
-[ext_resource type="Texture2D" uid="uid://d2yr7amipxp5p" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Neutral/enemies.realism-14.png" id="18_6k2uh"]
-[ext_resource type="Texture2D" uid="uid://dbd50gjxvuy5m" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Neutral/enemies.realism-15.png" id="19_hcbhg"]
-[ext_resource type="Texture2D" uid="uid://clmy3mqhyydu5" path="res://01 Final Draft/Art Assets/Notes/Enemies_ attack/attack.enemies.realism-1.png" id="20_hjsur"]
-[ext_resource type="Texture2D" uid="uid://bkrgrg3bjgvdt" path="res://01 Final Draft/Art Assets/Notes/Enemies_ attack/attack.enemies.realism-2.png" id="21_kt7lt"]
-[ext_resource type="Texture2D" uid="uid://ckbwps58wgxgl" path="res://01 Final Draft/Art Assets/Notes/Enemies_ attack/attack.enemies.realism-3.png" id="22_dc7yh"]
-[ext_resource type="Texture2D" uid="uid://btixpdc36s8h1" path="res://01 Final Draft/Art Assets/Notes/Enemies_ attack/attack.enemies.realism-4.png" id="23_gue07"]
-[ext_resource type="Texture2D" uid="uid://c4g302k1wef13" path="res://01 Final Draft/Art Assets/Notes/Enemies_ attack/attack.enemies.realism-5.png" id="24_6j8xg"]
-[ext_resource type="Texture2D" uid="uid://d3wamhxeako8a" path="res://01 Final Draft/Art Assets/Notes/Enemies_ attack/attack.enemies.realism-6.png" id="25_gqdr0"]
-[ext_resource type="Texture2D" uid="uid://dy6vvelbj0rd6" path="res://01 Final Draft/Art Assets/Notes/Enemies_ attack/attack.enemies.realism-7.png" id="26_48jbh"]
-[ext_resource type="Texture2D" uid="uid://cg3awccn5jbmf" path="res://01 Final Draft/Art Assets/Notes/Enemies_ attack/attack.enemies.realism-8.png" id="27_auilo"]
-[ext_resource type="Texture2D" uid="uid://cf7sylrcrgj77" path="res://01 Final Draft/Art Assets/Notes/Enemies_ attack/attack.enemies.realism-9.png" id="28_7u8oq"]
-[ext_resource type="Texture2D" uid="uid://dk5v1yp76woke" path="res://01 Final Draft/Art Assets/Notes/Enemies_ attack/attack.enemies.realism-10.png" id="29_puau8"]
-[ext_resource type="Texture2D" uid="uid://b4la75o7bvv7q" path="res://01 Final Draft/Art Assets/Notes/Enemies_ attack/attack.enemies.realism-11.png" id="30_5l3p7"]
-[ext_resource type="Texture2D" uid="uid://cuaxfrtydjt4d" path="res://01 Final Draft/Art Assets/Notes/Enemies_ attack/attack.enemies.realism-12.png" id="31_c8000"]
-[ext_resource type="Texture2D" uid="uid://bldmfa7j116us" path="res://01 Final Draft/Art Assets/Notes/Enemies_ attack/attack.enemies.realism-13.png" id="32_1bq0l"]
-[ext_resource type="Texture2D" uid="uid://6xwouxks1msk" path="res://01 Final Draft/Art Assets/Notes/Enemies_ attack/attack.enemies.realism-15.png" id="33_iiu48"]
-[ext_resource type="Texture2D" uid="uid://dvhjb4hlq7b5p" path="res://01 Final Draft/Art Assets/Notes/Enemies_ attack/attack.enemies.realism-14.png" id="34_fkpi7"]
-[ext_resource type="Texture2D" uid="uid://dptwyau4f0jv" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Death/dead.enemies.realism-1.png" id="35_o5ymj"]
-[ext_resource type="Texture2D" uid="uid://jw0htv8qrlcv" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Death/dead.enemies.realism-2.png" id="36_pvm0d"]
-[ext_resource type="Texture2D" uid="uid://daba18jeigtom" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Death/dead.enemies.realism-3.png" id="37_f5dfk"]
-[ext_resource type="Texture2D" uid="uid://sf0q72wgrx1c" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Death/dead.enemies.realism-4.png" id="38_pnror"]
-[ext_resource type="Texture2D" uid="uid://c8lu6q4t1xbka" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Death/dead.enemies.realism-5.png" id="39_t2n1x"]
-[ext_resource type="Texture2D" uid="uid://do4okbhm2cc8o" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Death/dead.enemies.realism-6.png" id="40_hkvr5"]
-[ext_resource type="Texture2D" uid="uid://j7d2dx3sesbw" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Death/dead.enemies.realism-7.png" id="41_1pl17"]
-[ext_resource type="Texture2D" uid="uid://dfphh5pmgmgcy" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Death/dead.enemies.realism-8.png" id="42_hbmxi"]
-[ext_resource type="Texture2D" uid="uid://b1soswy86b27d" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Death/dead.enemies.realism-9.png" id="43_x6ssw"]
-[ext_resource type="Texture2D" uid="uid://xb0cae375upi" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Death/dead.enemies.realism-10.png" id="44_2fms2"]
-[ext_resource type="Texture2D" uid="uid://du8t61uk0y2la" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Death/dead.enemies.realism-11.png" id="45_0iej0"]
-[ext_resource type="Texture2D" uid="uid://btopk7y8gw6l0" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Death/dead.enemies.realism-12.png" id="46_u4x11"]
-[ext_resource type="Texture2D" uid="uid://cbpfyp640scot" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Death/dead.enemies.realism-13.png" id="47_s0god"]
-[ext_resource type="Texture2D" uid="uid://ds67w2c6mrjgi" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Death/dead.enemies.realism-14.png" id="48_hwb4d"]
-[ext_resource type="Texture2D" uid="uid://c17q3hu2slp3v" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Death/dead.enemies.realism-15.png" id="49_ynjus"]
-[ext_resource type="AudioStream" uid="uid://ns3mkvpxtnd4" path="res://01 Final Draft/Audio/Note Hits/WaterColor/Harp Miss.wav" id="56_m5pun"]
-[ext_resource type="AudioStream" uid="uid://biliqhxkkneeg" path="res://01 Final Draft/Audio/Note Hits/WaterColor/Harp Ok.wav" id="57_tfiig"]
-[ext_resource type="AudioStream" uid="uid://bw3vjnach3x1h" path="res://01 Final Draft/Audio/Note Hits/WaterColor/Harp Perf.wav" id="58_330xr"]
-[ext_resource type="AudioStream" uid="uid://d1wi6a33ftbh" path="res://01 Final Draft/Audio/Note Hits/WaterColor/EDM_Miss.wav" id="59_hhvs4"]
-[ext_resource type="AudioStream" uid="uid://n730p30bl7r0" path="res://01 Final Draft/Audio/Note Hits/WaterColor/EDM_OK.wav" id="60_nqyyg"]
-[ext_resource type="AudioStream" uid="uid://coea3q3o8knqk" path="res://01 Final Draft/Audio/Note Hits/WaterColor/EDM_Perfect.wav" id="61_np24n"]
+[ext_resource type="Texture2D" uid="uid://cc15dc238dasj" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Neutral/realisim_enemies_neutral/enemies.realism-8.png" id="12_bw3jg"]
+[ext_resource type="Texture2D" uid="uid://bc2g6vsfaipbx" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Neutral/realisim_enemies_neutral/enemies.realism-9.png" id="13_s8l26"]
+[ext_resource type="Texture2D" uid="uid://dulhxsyijqrlo" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Neutral/realisim_enemies_neutral/enemies.realism-10.png" id="14_2ayds"]
+[ext_resource type="Texture2D" uid="uid://dxv8glnpsnvrb" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Neutral/realisim_enemies_neutral/enemies.realism-11.png" id="15_nw4mj"]
+[ext_resource type="Texture2D" uid="uid://bdhmv3p4oyxqi" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Neutral/realisim_enemies_neutral/enemies.realism-12.png" id="16_fvspq"]
+[ext_resource type="Texture2D" uid="uid://hsy38pd8qi88" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Neutral/realisim_enemies_neutral/enemies.realism-13.png" id="17_tsiuo"]
+[ext_resource type="Texture2D" uid="uid://d2yr7amipxp5p" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Neutral/realisim_enemies_neutral/enemies.realism-14.png" id="18_buy6o"]
+[ext_resource type="Texture2D" uid="uid://dbd50gjxvuy5m" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Neutral/realisim_enemies_neutral/enemies.realism-15.png" id="19_gdrq3"]
+[ext_resource type="Texture2D" uid="uid://clmy3mqhyydu5" path="res://01 Final Draft/Art Assets/Notes/Enemies_ attack/realism_attack/attack.enemies.realism-1.png" id="20_2q1sj"]
+[ext_resource type="Texture2D" uid="uid://bkrgrg3bjgvdt" path="res://01 Final Draft/Art Assets/Notes/Enemies_ attack/realism_attack/attack.enemies.realism-2.png" id="21_vuk1e"]
+[ext_resource type="Texture2D" uid="uid://ckbwps58wgxgl" path="res://01 Final Draft/Art Assets/Notes/Enemies_ attack/realism_attack/attack.enemies.realism-3.png" id="22_vk1wt"]
+[ext_resource type="Texture2D" uid="uid://btixpdc36s8h1" path="res://01 Final Draft/Art Assets/Notes/Enemies_ attack/realism_attack/attack.enemies.realism-4.png" id="23_6ow7t"]
+[ext_resource type="Texture2D" uid="uid://c4g302k1wef13" path="res://01 Final Draft/Art Assets/Notes/Enemies_ attack/realism_attack/attack.enemies.realism-5.png" id="24_h5xry"]
+[ext_resource type="Texture2D" uid="uid://d3wamhxeako8a" path="res://01 Final Draft/Art Assets/Notes/Enemies_ attack/realism_attack/attack.enemies.realism-6.png" id="25_fds0w"]
+[ext_resource type="Texture2D" uid="uid://dy6vvelbj0rd6" path="res://01 Final Draft/Art Assets/Notes/Enemies_ attack/realism_attack/attack.enemies.realism-7.png" id="26_r5ja2"]
+[ext_resource type="Texture2D" uid="uid://cg3awccn5jbmf" path="res://01 Final Draft/Art Assets/Notes/Enemies_ attack/realism_attack/attack.enemies.realism-8.png" id="27_wkrdj"]
+[ext_resource type="Texture2D" uid="uid://cf7sylrcrgj77" path="res://01 Final Draft/Art Assets/Notes/Enemies_ attack/realism_attack/attack.enemies.realism-9.png" id="28_lw1fu"]
+[ext_resource type="Texture2D" uid="uid://dk5v1yp76woke" path="res://01 Final Draft/Art Assets/Notes/Enemies_ attack/realism_attack/attack.enemies.realism-10.png" id="29_k4jxr"]
+[ext_resource type="Texture2D" uid="uid://b4la75o7bvv7q" path="res://01 Final Draft/Art Assets/Notes/Enemies_ attack/realism_attack/attack.enemies.realism-11.png" id="30_a6e7g"]
+[ext_resource type="Texture2D" uid="uid://cuaxfrtydjt4d" path="res://01 Final Draft/Art Assets/Notes/Enemies_ attack/realism_attack/attack.enemies.realism-12.png" id="31_qfj6v"]
+[ext_resource type="Texture2D" uid="uid://bldmfa7j116us" path="res://01 Final Draft/Art Assets/Notes/Enemies_ attack/realism_attack/attack.enemies.realism-13.png" id="32_gg0ea"]
+[ext_resource type="Texture2D" uid="uid://6xwouxks1msk" path="res://01 Final Draft/Art Assets/Notes/Enemies_ attack/realism_attack/attack.enemies.realism-15.png" id="33_73vus"]
+[ext_resource type="Texture2D" uid="uid://dvhjb4hlq7b5p" path="res://01 Final Draft/Art Assets/Notes/Enemies_ attack/realism_attack/attack.enemies.realism-14.png" id="34_d231p"]
+[ext_resource type="Texture2D" uid="uid://dptwyau4f0jv" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Death/realisim_death/dead.enemies.realism-1.png" id="35_aamat"]
+[ext_resource type="Texture2D" uid="uid://jw0htv8qrlcv" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Death/realisim_death/dead.enemies.realism-2.png" id="36_ry8gy"]
+[ext_resource type="Texture2D" uid="uid://daba18jeigtom" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Death/realisim_death/dead.enemies.realism-3.png" id="37_q6mwx"]
+[ext_resource type="Texture2D" uid="uid://sf0q72wgrx1c" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Death/realisim_death/dead.enemies.realism-4.png" id="38_aaikc"]
+[ext_resource type="Texture2D" uid="uid://c8lu6q4t1xbka" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Death/realisim_death/dead.enemies.realism-5.png" id="39_tepew"]
+[ext_resource type="Texture2D" uid="uid://do4okbhm2cc8o" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Death/realisim_death/dead.enemies.realism-6.png" id="40_s0rx6"]
+[ext_resource type="Texture2D" uid="uid://j7d2dx3sesbw" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Death/realisim_death/dead.enemies.realism-7.png" id="41_tiuhi"]
+[ext_resource type="Texture2D" uid="uid://dfphh5pmgmgcy" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Death/realisim_death/dead.enemies.realism-8.png" id="42_j0djk"]
+[ext_resource type="Texture2D" uid="uid://b1soswy86b27d" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Death/realisim_death/dead.enemies.realism-9.png" id="43_6bxgr"]
+[ext_resource type="Texture2D" uid="uid://xb0cae375upi" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Death/realisim_death/dead.enemies.realism-10.png" id="44_n5mcj"]
+[ext_resource type="Texture2D" uid="uid://du8t61uk0y2la" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Death/realisim_death/dead.enemies.realism-11.png" id="45_pbewr"]
+[ext_resource type="Texture2D" uid="uid://btopk7y8gw6l0" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Death/realisim_death/dead.enemies.realism-12.png" id="46_sxu1d"]
+[ext_resource type="Texture2D" uid="uid://cbpfyp640scot" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Death/realisim_death/dead.enemies.realism-13.png" id="47_a1i2b"]
+[ext_resource type="Texture2D" uid="uid://ds67w2c6mrjgi" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Death/realisim_death/dead.enemies.realism-14.png" id="48_it4l0"]
+[ext_resource type="Texture2D" uid="uid://c17q3hu2slp3v" path="res://01 Final Draft/Art Assets/Notes/Enemies_ Death/realisim_death/dead.enemies.realism-15.png" id="49_mcllq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l7rsm"]
 size = Vector2(96, 96)
@@ -69,7 +63,7 @@ size = Vector2(96, 96)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_717vl")
+"texture": ExtResource("2_jlxli")
 }],
 "loop": true,
 "name": &"1 R",
@@ -101,49 +95,49 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_717vl")
+"texture": ExtResource("2_jlxli")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_igp4d")
+"texture": ExtResource("6_2s4cr")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_dbicn")
+"texture": ExtResource("7_47apf")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_br1pv")
+"texture": ExtResource("8_8ubou")
 }, {
 "duration": 1.0,
-"texture": ExtResource("9_hadk8")
+"texture": ExtResource("9_3uyo0")
 }, {
 "duration": 1.0,
-"texture": ExtResource("10_hogcm")
+"texture": ExtResource("10_tsd72")
 }, {
 "duration": 1.0,
-"texture": ExtResource("11_gywcg")
+"texture": ExtResource("11_hqs7j")
 }, {
 "duration": 1.0,
-"texture": ExtResource("12_c6iwn")
+"texture": ExtResource("12_bw3jg")
 }, {
 "duration": 1.0,
-"texture": ExtResource("13_okr1y")
+"texture": ExtResource("13_s8l26")
 }, {
 "duration": 1.0,
-"texture": ExtResource("14_o1uea")
+"texture": ExtResource("14_2ayds")
 }, {
 "duration": 1.0,
-"texture": ExtResource("15_ckgq7")
+"texture": ExtResource("15_nw4mj")
 }, {
 "duration": 1.0,
-"texture": ExtResource("16_kb038")
+"texture": ExtResource("16_fvspq")
 }, {
 "duration": 1.0,
-"texture": ExtResource("17_yhggq")
+"texture": ExtResource("17_tsiuo")
 }, {
 "duration": 1.0,
-"texture": ExtResource("18_6k2uh")
+"texture": ExtResource("18_buy6o")
 }, {
 "duration": 1.0,
-"texture": ExtResource("19_hcbhg")
+"texture": ExtResource("19_gdrq3")
 }],
 "loop": true,
 "name": &"realism_emeny_neutral",
@@ -151,49 +145,49 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("20_hjsur")
+"texture": ExtResource("20_2q1sj")
 }, {
 "duration": 1.0,
-"texture": ExtResource("21_kt7lt")
+"texture": ExtResource("21_vuk1e")
 }, {
 "duration": 1.0,
-"texture": ExtResource("22_dc7yh")
+"texture": ExtResource("22_vk1wt")
 }, {
 "duration": 1.0,
-"texture": ExtResource("23_gue07")
+"texture": ExtResource("23_6ow7t")
 }, {
 "duration": 1.0,
-"texture": ExtResource("24_6j8xg")
+"texture": ExtResource("24_h5xry")
 }, {
 "duration": 1.0,
-"texture": ExtResource("25_gqdr0")
+"texture": ExtResource("25_fds0w")
 }, {
 "duration": 1.0,
-"texture": ExtResource("26_48jbh")
+"texture": ExtResource("26_r5ja2")
 }, {
 "duration": 1.0,
-"texture": ExtResource("27_auilo")
+"texture": ExtResource("27_wkrdj")
 }, {
 "duration": 1.0,
-"texture": ExtResource("28_7u8oq")
+"texture": ExtResource("28_lw1fu")
 }, {
 "duration": 1.0,
-"texture": ExtResource("29_puau8")
+"texture": ExtResource("29_k4jxr")
 }, {
 "duration": 1.0,
-"texture": ExtResource("30_5l3p7")
+"texture": ExtResource("30_a6e7g")
 }, {
 "duration": 1.0,
-"texture": ExtResource("31_c8000")
+"texture": ExtResource("31_qfj6v")
 }, {
 "duration": 1.0,
-"texture": ExtResource("32_1bq0l")
+"texture": ExtResource("32_gg0ea")
 }, {
 "duration": 1.0,
-"texture": ExtResource("33_iiu48")
+"texture": ExtResource("33_73vus")
 }, {
 "duration": 1.0,
-"texture": ExtResource("34_fkpi7")
+"texture": ExtResource("34_d231p")
 }],
 "loop": true,
 "name": &"realism_enemy_attack",
@@ -201,49 +195,49 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("35_o5ymj")
+"texture": ExtResource("35_aamat")
 }, {
 "duration": 1.0,
-"texture": ExtResource("36_pvm0d")
+"texture": ExtResource("36_ry8gy")
 }, {
 "duration": 1.0,
-"texture": ExtResource("37_f5dfk")
+"texture": ExtResource("37_q6mwx")
 }, {
 "duration": 1.0,
-"texture": ExtResource("38_pnror")
+"texture": ExtResource("38_aaikc")
 }, {
 "duration": 1.0,
-"texture": ExtResource("39_t2n1x")
+"texture": ExtResource("39_tepew")
 }, {
 "duration": 1.0,
-"texture": ExtResource("40_hkvr5")
+"texture": ExtResource("40_s0rx6")
 }, {
 "duration": 1.0,
-"texture": ExtResource("41_1pl17")
+"texture": ExtResource("41_tiuhi")
 }, {
 "duration": 1.0,
-"texture": ExtResource("42_hbmxi")
+"texture": ExtResource("42_j0djk")
 }, {
 "duration": 1.0,
-"texture": ExtResource("43_x6ssw")
+"texture": ExtResource("43_6bxgr")
 }, {
 "duration": 1.0,
-"texture": ExtResource("44_2fms2")
+"texture": ExtResource("44_n5mcj")
 }, {
 "duration": 1.0,
-"texture": ExtResource("45_0iej0")
+"texture": ExtResource("45_pbewr")
 }, {
 "duration": 1.0,
-"texture": ExtResource("46_u4x11")
+"texture": ExtResource("46_sxu1d")
 }, {
 "duration": 1.0,
-"texture": ExtResource("47_s0god")
+"texture": ExtResource("47_a1i2b")
 }, {
 "duration": 1.0,
-"texture": ExtResource("48_hwb4d")
+"texture": ExtResource("48_it4l0")
 }, {
 "duration": 1.0,
-"texture": ExtResource("49_ynjus")
+"texture": ExtResource("49_mcllq")
 }],
 "loop": true,
 "name": &"realism_enemy_death ",
@@ -305,28 +299,9 @@ scale = Vector2(0.13, 0.13)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sprite2D"]
 scale = Vector2(1.03339, 0.966636)
 sprite_frames = SubResource("SpriteFrames_xndp3")
-animation = &"realism_enemy_attack"
-frame_progress = 0.135619
+animation = &"realism_emeny_neutral"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
-
-[node name="Harp Miss" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("56_m5pun")
-
-[node name="Harp Good" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("57_tfiig")
-
-[node name="Harp Perfect" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("58_330xr")
-
-[node name="EDM Miss" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("59_hhvs4")
-
-[node name="EDM Good" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("60_nqyyg")
-
-[node name="EDM Perfect" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("61_np24n")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -36,16 +36,8 @@ func _on_body_entered(body):
 				queue_free()
 				if self.is_in_group("Perfect"):
 					Global.bossHealth -= 2
-					if Global.note_universe == "R" or "G": #Harp Perfect
-						get_node("/root/Final Draft/Harp Perfect").play()
-					if Global.note_universe == "B" or "P": #edm perferct
-						get_node("/root/Final Draft/EDM Perfect").play()
 				else:
 					Global.bossHealth -= 1
-					if Global.note_universe == "R" or "G": #Harp good
-						get_node("/root/Final Draft/Harp Good").play()
-					if Global.note_universe == "B" or "P": #EDm good
-						get_node("/root/Final Draft/EDM Good").play()
 				print("PlayerHit")
 				
 				if Global.bossHealth == 0:
@@ -77,10 +69,6 @@ func _on_area_entered(area):
 	if area.is_in_group("Miss"):
 		self.remove_from_group("Good")
 		self.add_to_group("Miss")
-		if Global.note_universe == "R" or "G": #Harp miss
-			get_node("/root/Final Draft/Harp Miss").play()
-		if Global.note_universe == "B" or "P": #EDm miss
-			get_node("/root/Final Draft/EDM Miss").play()
 		print("Note was missed")
 		Global.missedNotes -= 1
 		if Global.missedNotes == 0:

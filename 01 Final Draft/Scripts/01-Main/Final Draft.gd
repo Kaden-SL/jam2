@@ -4,6 +4,8 @@ extends Node2D
 const SMF = preload( "res://addons/midi/SMF.gd" )
 const Utility = preload( "res://addons/midi/Utility.gd" )
 var note = preload("res://01 Final Draft/Scenes/Notes/finalnote.tscn")
+var counter = 0
+var totalCounter = 0
 var left = Vector2(0,1000);
 var right = Vector2(2000,1000);
 var up = Vector2(1000,0); 
@@ -15,26 +17,22 @@ func _on_midi_event( channel, event ):
 	# This chunk of code makes the notes spawn in groups of 3
 	if event.type==SMF.MIDIEventType.note_on:
 		var instance = note.instantiate()
-		var dir = _RandomNumber(100)
-		if dir % 4 == 0:
+		if totalCounter == 0:
 			instance.position = left
-		elif dir % 4 != 0 && dir % 2 == 0:
+		if totalCounter == 1:
 			instance.position = up
-		elif dir % 4 != 0 && dir % 2 != 0 && dir % 6 == 0:
+		if totalCounter == 2:
 			instance.position = right
-		elif dir % 4 != 0 && dir % 2 != 0 && dir % 6 != 0 && dir % 3 == 0:
+		if totalCounter == 3:
 			instance.position = down
-		else:
-			dir = _RandomNumber(4)
-			if dir == 0:
-				instance.position = left
-			if dir == 1:
-				instance.position = up
-			if dir == 2:
-				instance.position = right
-			if dir == 3:
-				instance.position = down
 		add_child(instance)
+		counter += 1
+		if counter == 3:
+			counter = 0
+			if totalCounter == 3:
+				totalCounter = 0
+			else:
+				totalCounter += 1
 func _ready( ):
 	if self.midi_player.connect("midi_event",Callable(self,"_on_midi_event")) != OK:
 		print( "error" )
@@ -63,11 +61,6 @@ func _process(delta):
 		_SwitchAudioPlayer($MusicPlayerMelodic,$MusicPlayerEDM,$MusicPlayerRock,$TheMusicPlayer)
 	if Global.current_universe == "P":
 		_SwitchAudioPlayer($MusicPlayerEDM,$MusicPlayerMelodic,$MusicPlayerRock,$TheMusicPlayer)
-		
-	$PlayerHealthBar.set_value(Global.missedNotes)
-	$BossHealthBar.set_value(Global.bossHealth)
-	#get_node("/root/Final Draft/PlayerHealthBar").set_value(Global.missedNotes)
-	#get_node("$PlayerHealthBarBossHealthBar").set_value(Global.bossHealth)
 
 func _CheckHalfTime(AudioPlayer):
 	if AudioPlayer.get_playback_position() >= halfwayThroughSong:
@@ -85,6 +78,4 @@ func _SwitchAudioPlayer(NP,OP1,OP2,OP3):
 		if OP3.has_stream_playback():
 			NP.seek(OP3.get_playback_position())
 			OP3.stop()
-			
-func _RandomNumber(maxnum):
-	return randi() % maxnum
+
