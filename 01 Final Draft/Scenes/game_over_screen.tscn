@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://2nd5gvbe4d0w"]
+[gd_scene load_steps=6 format=3 uid="uid://bnya4p50vtvah"]
 
 [ext_resource type="Script" path="res://01 Final Draft/Scenes/GameOverScreen.gd" id="1_hesb4"]
 [ext_resource type="Texture2D" uid="uid://bypcfn73dt4p7" path="res://01 Final Draft/Art Assets/VerseWalkerCoverImageUpdated.png" id="1_ud0o5"]
