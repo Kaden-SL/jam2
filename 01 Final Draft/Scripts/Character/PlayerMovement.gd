@@ -85,7 +85,7 @@ func _setAnim(universe):
 		if universe == "R":
 			$"Player Animations".play("1 R")
 		if universe == "G":
-			$"Player Animations".play("2 G")
+			$"Player Animations".play("Punk_Character_Idle")
 		if universe == "B":
 			$"Player Animations".play("3 B")
 		if universe == "P":
@@ -95,11 +95,11 @@ func _setAnim(universe):
 		if universe == "R":
 			$"Player Animations".play("Realism_Character")
 		if universe == "G":
-			$"Player Animations".play("2 G")
+			$"Player Animations".play("Punk_Character_Attack")
 		if universe == "B":
-			$"Player Animations".play("3 B")
+			$"Player Animations".play("WC_Character_Attack")
 		if universe == "P":
-			$"Player Animations".play("4 P")
+			$"Player Animations".play("EDM_Character")
 			# apply = false
 	if Global.current_universe != universe:
 		Global.current_universe = universe

@@ -352,7 +352,7 @@ scale = Vector2(0.13, 0.13)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sprite2D"]
 scale = Vector2(1.03339, 0.966636)
 sprite_frames = SubResource("SpriteFrames_xndp3")
-animation = &"wc_enemy_death"
+animation = &"3 B"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
 
