@@ -16,10 +16,10 @@ func _process(delta):
 	
 	# Syncs the note sprite with the universe background
 	if Global.note_universe == "R":
-		$Sprite2D/AnimatedSprite2D.animation = "1 R"
+		$Sprite2D/AnimatedSprite2D.play("realism_emeny_neutral")
 		_switch_groups("R","P")
 	if Global.note_universe == "B":
-		$Sprite2D/AnimatedSprite2D.animation = "3 B"
+		$Sprite2D/AnimatedSprite2D.play("wc_enemy_attack")
 		_switch_groups("B","R")
 	if Global.note_universe == "G":
 		$Sprite2D/AnimatedSprite2D.animation = "2 G"
@@ -42,6 +42,8 @@ func _on_body_entered(body):
 				
 				if Global.bossHealth == 0:
 					print("boss dead")
+					Global.bossHealth += 100
+					get_tree().change_scene_to_file("res://01 Final Draft/Scenes/game_over_screen.tscn")
 	
 	#if body.is_in_group("DeathBox"):
 		#print("DeathBoxHit")
@@ -73,4 +75,6 @@ func _on_area_entered(area):
 		Global.missedNotes -= 1
 		if Global.missedNotes == 0:
 			print("dead")
+			Global.missedNotes = 50
+			get_tree().change_scene_to_file("res://01 Final Draft/Scenes/game_over_screen.tscn")
 		queue_free()

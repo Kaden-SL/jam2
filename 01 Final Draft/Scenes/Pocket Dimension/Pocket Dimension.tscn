@@ -5,6 +5,12 @@
 [ext_resource type="Texture2D" uid="uid://dfcwdpkjhe54h" path="res://01 Final Draft/Art Assets/Pocket Dimension/wc_pocketdim.png" id="3_767lh"]
 [ext_resource type="Texture2D" uid="uid://btfs5m28ynjpk" path="res://01 Final Draft/Art Assets/Pocket Dimension/Punk_Personal_Dimension.png" id="4_xklqg"]
 [ext_resource type="Texture2D" uid="uid://uu7hfyojkk7f" path="res://01 Final Draft/Art Assets/Pocket Dimension/EDM Square.png" id="5_pl5ft"]
+<<<<<<< HEAD
+=======
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ek8b5"]
+load_path = "res://.godot/imported/Untitled_ArtworkTempBG.png-bad1aa13f634bea13793ed2ab83ed515.ctex"
+>>>>>>> parent of f9e4550 (add animation enemies)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f2l58"]
 size = Vector2(26.6342, 4.89394)
@@ -31,6 +37,10 @@ texture = ExtResource("5_pl5ft")
 visible = false
 position = Vector2(670.239, 409)
 scale = Vector2(0.30066, -0.19269)
+<<<<<<< HEAD
+=======
+texture = SubResource("CompressedTexture2D_ek8b5")
+>>>>>>> parent of f9e4550 (add animation enemies)
 
 [node name="MissedCollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
