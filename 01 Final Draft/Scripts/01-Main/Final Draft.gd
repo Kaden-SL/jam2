@@ -9,6 +9,8 @@ var right = Vector2(2000,1000);
 var up = Vector2(1000,0); 
 var down = Vector2(1000,2000);
 @export var halfwayThroughSong = 0;
+var waiting = true
+@export var secondsForSongToStart = 1.4
 
 func _on_midi_event( channel, event ):
 	#print(SMF.MIDIEventType)
@@ -44,14 +46,12 @@ func _ready( ):
 	print( OS.get_connected_midi_inputs( ) )
 	for current_midi_input in OS.get_connected_midi_inputs( ):
 		print(current_midi_input)
-	await get_tree().create_timer(1.4).timeout
-	$TheMusicPlayer.play()
-	$MusicPlayerRock.stop()
-	$MusicPlayerMelodic.stop()
-	$MusicPlayerEDM.stop()
+	await tryAwait()
+
+
 	
 func _process(delta):
-	if Global.current_universe == "R":
+	if Global.current_universe == "R" && !waiting:
 		_SwitchAudioPlayer($TheMusicPlayer,$MusicPlayerRock,$MusicPlayerMelodic,$MusicPlayerEDM)
 		_CheckHalfTime($TheMusicPlayer)
 	
@@ -86,3 +86,12 @@ func _SwitchAudioPlayer(NP,OP1,OP2,OP3):
 			
 func _RandomNumber(maxnum):
 	return randi() % maxnum
+	
+func tryAwait():
+	await get_tree().create_timer(secondsForSongToStart).timeout
+	print("I waited")
+	$TheMusicPlayer.play()
+	$MusicPlayerRock.stop()
+	$MusicPlayerMelodic.stop()
+	$MusicPlayerEDM.stop()
+	waiting = false

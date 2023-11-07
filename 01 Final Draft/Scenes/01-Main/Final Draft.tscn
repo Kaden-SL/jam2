@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://b5dcwiup2l7nv"]
+[gd_scene load_steps=13 format=3 uid="uid://b8ft8yi2n8tv4"]
 
 [ext_resource type="Script" path="res://01 Final Draft/Scripts/01-Main/Final Draft.gd" id="1_0qwpp"]
 [ext_resource type="Script" path="res://addons/midi/MidiPlayer.gd" id="2_1xniy"]
