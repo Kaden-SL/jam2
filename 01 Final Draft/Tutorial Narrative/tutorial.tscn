@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://boyaxwsxey5v6"]
 
 [ext_resource type="Script" path="res://01 Final Draft/Tutorial Narrative/tutorial.gd" id="1_lxvia"]
-[ext_resource type="Texture2D" uid="uid://cvwtmldkfb3yp" path="res://01 Final Draft/Tutorial Narrative/Tutorial Narrative.png" id="2_sa32f"]
+[ext_resource type="Texture2D" uid="uid://bc84caiwglq3d" path="res://01 Final Draft/Tutorial Narrative/Tutorial Narrative.png" id="2_sa32f"]
 
 [sub_resource type="Animation" id="Animation_370ro"]
 resource_name = " Fade In"
