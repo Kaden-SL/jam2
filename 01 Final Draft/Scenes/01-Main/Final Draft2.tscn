@@ -15,7 +15,7 @@
 
 [node name="Final Draft" type="Node2D"]
 script = ExtResource("1_gosc0")
-endOfSong = 30
+endOfSong = 25
 continuedScene = true
 universe1 = "P"
 universe2 = "B"

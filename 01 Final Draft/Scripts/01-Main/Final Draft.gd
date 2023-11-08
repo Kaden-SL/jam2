@@ -116,7 +116,10 @@ func _CheckEnd(AudioPlayer):
 			Global.prevBossHealth = Global.bossHealth
 			Global.prevMissedNotes = Global.missedNotes
 		Global.currentLevel += 1
-		get_tree().change_scene_to_file("res://01 Final Draft/Scenes/01-Main/Final Draft"+str(Global.currentLevel)+".tscn")
+		if Global.currentLevel != 4:
+			get_tree().change_scene_to_file("res://01 Final Draft/Scenes/01-Main/Final Draft"+str(Global.currentLevel)+".tscn")
+		else:
+			get_tree().change_scene_to_file("res://01 Final Draft/Scenes/game_over_screen.tscn")
 	else:
 		#print(AudioPlayer.get_playback_position())
 		pass
