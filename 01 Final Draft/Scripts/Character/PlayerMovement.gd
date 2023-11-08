@@ -3,29 +3,34 @@ extends CharacterBody2D
 var speed = 20000
 var playerOrigin = Vector2()
 var max_distance_to_center = 500
-#var speed = 250
-#var playerOrigin_x
-#var playerOrigin_y
 var current_universe = Global.current_universe
 var sprite
 var isMoving = false
+var onetime = true;
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	_setAnim("R")
 	playerOrigin = self.position
 	sprite = $"Player Animations"
 	#playerOrigin_x = self.position.x
 	#playerOrigin_y = self.position.y
 	
+	
 func _process(_delta):
-	if Input.is_action_just_pressed("R") && Global.sceneTiming == false:
-		_setAnim("R")
-	if Input.is_action_just_pressed("G") && Global.sceneTiming == false:
-		_setAnim("G")
-	if Input.is_action_just_pressed("B") && Global.isHalfwayThroughSong == true && Global.sceneTiming == true:
-		_setAnim("B")
-	if Input.is_action_just_pressed("P") && Global.isHalfwayThroughSong == true && Global.sceneTiming == true:
-		_setAnim("P")
+	if onetime:
+		_setAnim(Global.universe1)
+		onetime = false
+	if Input.is_action_just_pressed("R"):
+		if "R" == Global.universe1 or "R" == Global.universe2: 
+			_setAnim("R")
+	if Input.is_action_just_pressed("G"):
+		if "G" == Global.universe1 or "G" == Global.universe2: 
+			_setAnim("G")
+	if Input.is_action_just_pressed("B"):
+		if "B" == Global.universe1 or "B" == Global.universe2: 
+			_setAnim("B")
+	if Input.is_action_just_pressed("P"):
+		if "P" == Global.universe1 or "P" == Global.universe2: 
+			_setAnim("P")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
@@ -104,3 +109,4 @@ func _setAnim(universe):
 			# apply = false
 	if Global.current_universe != universe:
 		Global.current_universe = universe
+		print("i ran on ready")

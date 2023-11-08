@@ -8,12 +8,15 @@ var deafultbossHealth = 100
 
 var missedNotes = defaultmissedNotes
 var bossHealth = deafultbossHealth
-var current_universe = "R"
-var note_universe = "R"
+var current_universe = ""
+var note_universe = ""
 
 var isTouchingNote = false;
 var ActiveSongPlayer = "";
 var isHalfwayThroughSong = false;
-var sceneTiming = false;
+#var sceneTiming = false;
 
 var currentLevel = 0
+
+var universe1 = ""
+var universe2 = ""

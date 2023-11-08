@@ -1,64 +1,40 @@
 extends StaticBody2D
 @export var timeoutTime = 5
-
+var onetime = true
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	#$Timer.start()
-	$Realism.visible = true
+	$Realism.visible = false
 	$WaterColor.visible = false
 	$Punk.visible = false
 	$EDM.visible = false
+	#Global.note_universe = Global.current_universe
+	#switchU(Global.universe2,false)
 	switchBG()
-	
+
+func _process(delta):
+	if onetime:
+		switchU(Global.universe1,true)
+		Global.note_universe = Global.universe1
+		onetime = false
+
 # swtiches bg and tells notes to switch sprite
 func switchBG():
-	if Global.isHalfwayThroughSong == false:
-		await get_tree().create_timer(timeoutTime).timeout
-		$Realism.visible = false
-		$Punk.visible = true
-		Global.note_universe = "G"
-		await get_tree().create_timer(timeoutTime).timeout
-		$Punk.visible = false
-		$Realism.visible = true
-		Global.note_universe = "R"
-		switchBG()
-	else:
-		await get_tree().create_timer(timeoutTime).timeout
-		Global.sceneTiming = true;
-		$EDM.visible = false
-		$Punk.visible = false
-		$Realism.visible = false
-		$WaterColor.visible = true
-		Global.note_universe = "B"
-		await get_tree().create_timer(timeoutTime).timeout
-		$WaterColor.visible = false
-		$EDM.visible = true
-		Global.note_universe = "P"
-		switchBG()
+	await get_tree().create_timer(timeoutTime).timeout
+	Global.note_universe = Global.universe2
+	switchU(Global.universe2,true)
+	switchU(Global.universe1,false)
+	await get_tree().create_timer(timeoutTime).timeout
+	Global.note_universe = Global.universe1
+	switchU(Global.universe1,true)
+	switchU(Global.universe2,false)
+	switchBG()
 	
-	
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-	#$Sprite2D.visible = true
-	#switchBG()
-	
-func goR():
-	$Realism.visible = true
-	$WaterColor.visible = false
-	$Punk.visible = false
-	$EDM.visible = false
-func goG():
-	$Realism.visible = false
-	$WaterColor.visible = true
-	$Punk.visible = false
-	$EDM.visible = false
-func goB():
-	$Realism.visible = false
-	$WaterColor.visible = false
-	$Punk.visible = true
-	$EDM.visible = false
-func goP():
-	$Realism.visible = false
-	$WaterColor.visible = false
-	$Punk.visible = false
-	$EDM.visible = true
+func switchU(universe,state):
+	if universe == "R":
+		$Realism.visible = state
+	if universe == "G":
+		$Punk.visible = state
+	if universe == "B":
+		$WaterColor.visible = state
+	if universe == "P":
+		$EDM.visible = state
