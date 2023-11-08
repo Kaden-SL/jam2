@@ -6,7 +6,7 @@ var current_universe = Global.current_universe
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	self.add_to_group("Note")
-
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	# move note position towards the center of the screen
@@ -39,15 +39,8 @@ func _on_body_entered(body):
 					
 				else:
 					Global.bossHealth -= 1
+					
 				print("PlayerHit")
-				#if Global.note_universe == "R":
-					#$Sprite2D/AnimatedSprite2D.play("realism_enemy_death ")
-				#if Global.note_universe == "B":
-					#$Sprite2D/AnimatedSprite2D.play("wc_enemy_death")
-				#if Global.note_universe == "G":
-					#$Sprite2D/AnimatedSprite2D.animation = "Punk_death"
-				#if Global.note_universe == "P":
-					#$Sprite2D/AnimatedSprite2D.animation = "EDM_death"
 				
 				if Global.bossHealth <= 0:
 					print("boss dead")
@@ -74,14 +67,26 @@ func _switch_groups(NG,OG):
 func _on_area_entered(area):
 	if area.is_in_group("Perfect"):
 		self.add_to_group("Perfect")
+		if Global.note_universe == "R" or "G": #Harp Perfect
+			$"Harp Perfect".play()
+		if Global.note_universe == "B" or "P": #edm perferct
+			$"EDM Perfect".play()
 		
 	if area.is_in_group("Good"):
 		self.remove_from_group("Perfect")
 		self.add_to_group("Good")
+		if Global.note_universe == "R" or "G": #Harp good
+			$"Harp Good".play()
+		if Global.note_universe == "B" or "P": #EDm good
+			$"EDM Good".play()
 		
 	if area.is_in_group("Miss"):
 		self.remove_from_group("Good")
 		self.add_to_group("Miss")
+		if Global.note_universe == "R" or "G": #Harp miss
+			$"Harp Miss".play()
+		if Global.note_universe == "B" or "P": #EDm miss
+			$"EDM Miss".play()
 		print("Note was missed")
 		Global.missedNotes -= 1
 		if Global.missedNotes <= 0:
