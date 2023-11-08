@@ -13,4 +13,4 @@ func fade_out():
  
 
 func start_game():
- get_tree().change_scene_to_file("res://01 Final Draft/Scenes/01-Main/Final Draft.tscn")
+ get_tree().change_scene_to_file("res://01 Final Draft/Scenes/01-Main/Final Draft0.tscn")
