@@ -2,10 +2,9 @@ extends Area2D
 @export var speed = 500.0;
 var centerScreen = Vector2(1000,1000)
 var current_universe = Global.current_universe
-var onetime = true;
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	#Global.note_universe = Global.current_universe
 	self.add_to_group("Note")
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -18,16 +17,16 @@ func _process(delta):
 	# Syncs the note sprite with the universe background
 	if Global.note_universe == "R":
 		$Sprite2D/AnimatedSprite2D.play("realism_emeny_neutral")
-		_switch_groups("R","P","B","G")
+		_switch_groups("R","P")
 	if Global.note_universe == "B":
 		$Sprite2D/AnimatedSprite2D.play("wc_enemy_attack")
-		_switch_groups("B","R","G","P")
+		_switch_groups("B","R")
 	if Global.note_universe == "G":
 		$Sprite2D/AnimatedSprite2D.animation = "Punk_attack"
-		_switch_groups("G","B","R","P")
+		_switch_groups("G","B")
 	if Global.note_universe == "P":
 		$Sprite2D/AnimatedSprite2D.animation = "EDM_attack"
-		_switch_groups("P","G","B","R")
+		_switch_groups("P","G")
 		
 func _on_body_entered(body):
 	# if the notes touch the player, and the player is in the correct universe: hit the note
@@ -58,13 +57,9 @@ func _on_body_entered(body):
 	
 
 # switches notes to be in correct universe
-func _switch_groups(NG,OG,OG2,OG3):
+func _switch_groups(NG,OG):
 	if self.is_in_group(OG):
 		self.remove_from_group(OG)
-	if self.is_in_group(OG2):
-		self.remove_from_group(OG2)
-	if self.is_in_group(OG3):
-		self.remove_from_group(OG3)
 	if self.is_in_group(NG) == false:
 		self.add_to_group(NG)
 

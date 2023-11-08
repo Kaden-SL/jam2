@@ -15,9 +15,8 @@
 
 [node name="Final Draft" type="Node2D"]
 script = ExtResource("1_hfhde")
+halfwayThroughSong = 10
 endOfSong = 50
-universe1 = "R"
-universe2 = "G"
 
 [node name="GodotMIDIPlayer" type="Node" parent="."]
 script = ExtResource("2_yphx2")
@@ -61,10 +60,16 @@ offset_bottom = 1356.0
 scale = Vector2(4.92, 6.84)
 script = ExtResource("9_7s73j")
 
-[node name="UniversePlayer1" type="AudioStreamPlayer2D" parent="."]
+[node name="TheMusicPlayer" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("10_l2wfq")
 
-[node name="UniversePlayer2" type="AudioStreamPlayer2D" parent="."]
+[node name="MusicPlayerRock" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_gxw46")
+
+[node name="MusicPlayerMelodic" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_l2wfq")
+
+[node name="MusicPlayerEDM" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("11_gxw46")
 
 [node name="Perfect" parent="." groups=["Perfect"] instance=ExtResource("12_wlnk8")]

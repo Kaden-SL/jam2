@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://c85anlxu204nq"]
+[gd_scene load_steps=13 format=3 uid="uid://big32djpyn0e2"]
 
 [ext_resource type="Script" path="res://01 Final Draft/Scripts/01-Main/Final Draft.gd" id="1_gosc0"]
 [ext_resource type="Script" path="res://addons/midi/MidiPlayer.gd" id="2_dn2nw"]
@@ -9,20 +9,19 @@
 [ext_resource type="Script" path="res://01 Final Draft/Scripts/Notes/FinalMissedNotes.gd" id="7_od28w"]
 [ext_resource type="Script" path="res://01 Final Draft/Scripts/Boss/FinalBossHealth.gd" id="8_t6jjb"]
 [ext_resource type="Script" path="res://01 Final Draft/Scripts/01-Main/FinalCurrentUniverse.gd" id="9_i6m1y"]
-[ext_resource type="AudioStream" uid="uid://d1hjb7035remk" path="res://01 Final Draft/Audio/01-Main/EDM Portion/EDM.wav" id="10_g2b17"]
-[ext_resource type="AudioStream" uid="uid://qp7c2fvihh2" path="res://01 Final Draft/Audio/01-Main/EDM Portion/EDM_Harp.wav" id="11_6sy1h"]
+[ext_resource type="AudioStream" uid="uid://dkq0tvw54cmqd" path="res://01 Final Draft/Audio/01-Main/ClassicalSong.wav" id="10_y0psu"]
+[ext_resource type="AudioStream" uid="uid://djp5ond4op60s" path="res://01 Final Draft/Audio/01-Main/AcrylicRock.wav" id="11_av30e"]
 [ext_resource type="PackedScene" uid="uid://uuky1ny3r7jt" path="res://01 Final Draft/Scenes/Notes/Final_Note_Hit_Level.tscn" id="12_iq4ao"]
 
 [node name="Final Draft" type="Node2D"]
 script = ExtResource("1_gosc0")
-endOfSong = 30
+halfwayThroughSong = 10
+endOfSong = 40
 continuedScene = true
-universe1 = "P"
-universe2 = "B"
 
 [node name="GodotMIDIPlayer" type="Node" parent="."]
 script = ExtResource("2_dn2nw")
-file = "res://data/TestEDMIDI.mid"
+file = "res://data/AcrylicMelodyMIDI.mid"
 playing = true
 volume_db = -80.0
 soundfont = "res://data/Aspirin-Stereo.sf2"
@@ -62,11 +61,17 @@ offset_bottom = 1356.0
 scale = Vector2(4.92, 6.84)
 script = ExtResource("9_i6m1y")
 
-[node name="UniversePlayer1" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("10_g2b17")
+[node name="TheMusicPlayer" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_y0psu")
 
-[node name="UniversePlayer2" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("11_6sy1h")
+[node name="MusicPlayerRock" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_av30e")
+
+[node name="MusicPlayerMelodic" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_y0psu")
+
+[node name="MusicPlayerEDM" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_av30e")
 
 [node name="Perfect" parent="." groups=["Perfect"] instance=ExtResource("12_iq4ao")]
 position = Vector2(1000, 1000)
