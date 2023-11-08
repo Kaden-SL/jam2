@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Jam 2"
-run/main_scene="res://01 Final Draft/Scenes/01-Main/Final Draft0.tscn"
+run/main_scene="res://01 Final Draft/Intro Narrative/Main Menu.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
 

@@ -1,14 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://bbfcscv6aabyq"]
+[gd_scene load_steps=6 format=3 uid="uid://bbfcscv6aabyq"]
 
-[ext_resource type="Script" path="res://01 Final Draft/Scenes/GameOverScreen.gd" id="1_sju3u"]
+[ext_resource type="Script" path="res://01 Final Draft/Intro Narrative/Main Menu.gd" id="1_cmxtk"]
 [ext_resource type="Texture2D" uid="uid://bypcfn73dt4p7" path="res://01 Final Draft/Art Assets/VerseWalkerCoverImageUpdated.png" id="2_khlj7"]
 [ext_resource type="FontFile" uid="uid://dm74e6myr186j" path="res://01 Final Draft/Art Assets/Cinzel-VariableFont_wght.ttf" id="3_7e5fl"]
+[ext_resource type="AudioStream" uid="uid://dwj6yjm272tw1" path="res://01 Final Draft/Audio/01-Main/Basic Menu Music.wav" id="4_6ub6u"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_macs6"]
 bg_color = Color(0.286275, 0.286275, 0.286275, 0)
 
-[node name="GameOverScreen" type="CanvasLayer"]
-script = ExtResource("1_sju3u")
+[node name="MainMenu" type="CanvasLayer"]
+script = ExtResource("1_cmxtk")
 
 [node name="VerseWalkerCoverImageUpdated" type="Sprite2D" parent="."]
 position = Vector2(992, 1001)
@@ -46,5 +47,8 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("3_7e5fl")
 theme_override_font_sizes/font_size = 70
 text = "Start Game"
+
+[node name="MenuMusic" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_6ub6u")
 
 [connection signal="pressed" from="Panel/MarginContainer/CenterContainer/Rows/Button" to="." method="_on_button_pressed" flags=18]
